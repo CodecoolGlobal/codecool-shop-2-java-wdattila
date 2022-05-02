@@ -27,10 +27,16 @@ public class ProductController extends HttpServlet {
         ProductCategoryDao productCategoryDataStore = ProductCategoryDaoMem.getInstance();
         ProductService productService = new ProductService(productDataStore,productCategoryDataStore);
 
+        int category = 1;
+        if(req.getParameterMap().containsKey("category")){
+            category = Integer.parseInt(req.getParameter("category"));
+        }
+
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
         context.setVariable("category", productService.getProductCategory(1));
-        context.setVariable("products", productService.getProductsForCategory(1));
+        context.setVariable("categories", productCategoryDataStore.getAll());
+        context.setVariable("products", productService.getProductsForCategory(category));
         // // Alternative setting of the template context
         // Map<String, Object> params = new HashMap<>();
         // params.put("category", productCategoryDataStore.find(1));
