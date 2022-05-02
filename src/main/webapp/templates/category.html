@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="category" th:fragment="category">
+    <div th:each="category,iterStat : ${categories}">
+        <input type="checkbox" id="category" name="category" th:id="${category.name}" th:name="${category.name}">
+        <label for="category" th:for="${category.name}" th:text="${category.name}">Category</label>
+    </div>
+</div>
+
+</body>
+</html>
