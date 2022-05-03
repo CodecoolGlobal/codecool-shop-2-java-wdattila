@@ -109,7 +109,8 @@ h1{
 }
 
 .col{
-    margin-top: 50px
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 /* Add a black background color to the top navigation */
@@ -118,3 +119,7 @@ h1{
     overflow: hidden;
 }
 
+.btn-nav{
+    margin-left: 3px;
+    margin-right: 3px;
+}
