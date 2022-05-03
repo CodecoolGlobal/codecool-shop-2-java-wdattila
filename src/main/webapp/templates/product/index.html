@@ -39,17 +39,15 @@
     <h1><img src="/static/img/Smoke_logo.png" height="96px" width="96px">Smoke</h1>
 </div>
 
-<div th:replace="category.html :: category"></div>
-
+<div class="card">
+    <strong th:text="${category.name}">Category Title</strong>
+</div>
 <div class="container">
-    <div class="card">
-        <strong th:text="${category.name}">Category Title</strong>
-    </div>
-
-    <div id="products" class="row">
-        <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
+    <div th:replace="category.html :: category"></div>
+    <div id="products" class="row row-cols-5">
+        <div class="col" th:each="prod,iterStat : ${products}">
             <div class="card">
-                <img class="" src="http://placehold.it/400x250/000/fff" th:attr="src='/static/img/product_' + ${prod.id} + '.jpg'" alt="" />
+                <img height="240" class="" src="/static/img/placeholder.png" th:attr="src='/static/img/product_' + ${prod.id} + '.png'" alt="" />
                 <div class="card-header">
                     <h4 class="card-title" th:text="${prod.name}">Product name</h4>
                     <p class="card-text" th:text="${prod.description}">Product description... </p>
