@@ -2,7 +2,12 @@ package com.codecool.shop.dao.implementation;
 
 import com.codecool.shop.dao.SupplierDao;
 import com.codecool.shop.model.Supplier;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,5 +47,23 @@ public class SupplierDaoMem implements SupplierDao {
     @Override
     public List<Supplier> getAll() {
         return data;
+    }
+
+    @Override
+    public void readFromFile() {
+        try (Reader reader = new InputStreamReader(
+                SupplierDaoMem.class.getResourceAsStream("/suppliers.json"))) {
+            Gson gson = new Gson();
+
+            JsonObject data = gson.fromJson(reader, JsonObject.class);
+            JsonArray suppliers = data.getAsJsonArray("suppliers");
+
+            for (int i = 0; i < suppliers.size(); i++) {
+                JsonObject supplier = suppliers.get(i).getAsJsonObject();
+                add(new Supplier(supplier.get("name").getAsString(), supplier.get("description").getAsString()));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
