@@ -1,0 +1,25 @@
+{
+  "suppliers":
+  [
+    {
+      "name": "Amazon",
+      "description": "Digital content and services"
+    },
+    {
+      "name": "Lenovo",
+      "description": "Computers"
+    },
+    {
+      "name": "Apple",
+      "description": "Digital content and services"
+    },
+    {
+      "name": "NES",
+      "description": "Digital content and services"
+    },
+    {
+      "name": "Nintendo",
+      "description": "Digital content and services"
+    }
+  ]
+}
