@@ -1,0 +1,27 @@
+{
+  "products":
+  [
+    {
+      "name": "Amazon",
+      "defaultPrice": 49.9,
+      "defaultCurrency": "EUR",
+      "description": "Fantastic price. Large content ecosystem. Good parental controls. Helpful technical support.",
+      "categoryId": 1,
+      "supplierId": 1
+    },{
+    "name": "Lenovo IdeaPad Miix 700",
+    "defaultPrice": 479,
+    "defaultCurrency": "EUR",
+    "description": "Keyboard cover is included. Fanless Core m5 processor. Full-size USB ports. Adjustable kickstand.",
+    "categoryId": 1,
+    "supplierId": 1
+  },{
+    "name": "Amazon Fire HD 8",
+    "defaultPrice": 89,
+    "defaultCurrency": "EUR",
+    "description": "Amazon's latest Fire HD 8 tablet is a great value for media consumption.",
+    "categoryId": 1,
+    "supplierId": 1
+  }
+  ]
+}
