@@ -2,24 +2,16 @@
   "suppliers":
   [
     {
-      "name": "Amazon",
+      "name": "Nintendont",
       "description": "Digital content and services"
     },
     {
-      "name": "Lenovo",
-      "description": "Computers"
+      "name": "Gamma Freak",
+      "description": "RPG Video game developer"
     },
     {
-      "name": "Apple",
-      "description": "Digital content and services"
-    },
-    {
-      "name": "NES",
-      "description": "Digital content and services"
-    },
-    {
-      "name": "Nintendo",
-      "description": "Digital content and services"
+      "name": "Camco",
+      "description": "Video game developer"
     }
   ]
 }
