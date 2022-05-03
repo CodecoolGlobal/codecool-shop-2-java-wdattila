@@ -63,8 +63,28 @@ body{
 {
     margin: 0 0 11px;
 }
+
+/*products description*/
 p.card-text{
     height: 150px;
+}
+
+/*products title*/
+.card-title{
+    height: 60px;
+}
+
+/*products background*/
+.col>.card{
+    box-shadow: 5px 5px 20px 5px black;
+    color: white;
+    background: #3D424A;
+}
+
+/*category card*/
+body>.card{
+    color: white;
+    background: #3D424A;
 }
 
 .container{
@@ -73,6 +93,7 @@ p.card-text{
 }
 
 .category{
+    color: white;
     flex-shrink: 0;
     width: 200px;
 }
@@ -82,3 +103,18 @@ p.card-text{
         max-width: 1500px;
     }
 }
+
+h1{
+    color: white;
+}
+
+.col{
+    margin-top: 50px
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
