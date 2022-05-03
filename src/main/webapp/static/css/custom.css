@@ -1,3 +1,6 @@
+body{
+    background: #383c44;
+}
 .glyphicon {
     margin-right:5px;
 }
@@ -59,4 +62,23 @@
 .list-group-item-text
 {
     margin: 0 0 11px;
+}
+p.card-text{
+    height: 150px;
+}
+
+.container{
+    display: flex;
+    margin-left: 0px;
+}
+
+.category{
+    flex-shrink: 0;
+    width: 200px;
+}
+
+@media (min-width: 1600px) {
+    .container{
+        max-width: 1500px;
+    }
 }
