@@ -95,7 +95,8 @@ body>.card{
 .categories{
     color: white;
     flex-shrink: 0;
-    width: 200px;
+    width: 175px;
+    margin-left: 25px;
 }
 
 @media (min-width: 1600px) {
@@ -125,4 +126,8 @@ h1{
 .btn-nav{
     margin-left: 3px;
     margin-right: 3px;
+}
+
+.search-terms{
+    color: white;
 }
