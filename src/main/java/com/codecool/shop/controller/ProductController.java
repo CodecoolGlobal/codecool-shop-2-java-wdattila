@@ -4,6 +4,7 @@ import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.implementation.ProductCategoryDaoMem;
 import com.codecool.shop.dao.implementation.ProductDaoMem;
+import com.codecool.shop.model.BaseModel;
 import com.codecool.shop.service.ProductService;
 import com.codecool.shop.config.TemplateEngineUtil;
 import org.thymeleaf.TemplateEngine;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @WebServlet(urlPatterns = {"/"})
 public class ProductController extends HttpServlet {
@@ -34,7 +36,9 @@ public class ProductController extends HttpServlet {
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
-        context.setVariable("mainCategory", productService.getProductCategory(1));
+        context.setVariable("mainCategories", productCategoryDataStore.getMultipleById(category));
+        context.setVariable("mainCategoriesNames", productCategoryDataStore.getMultipleById(category).stream()
+                .map(BaseModel::getName).collect(Collectors.toList()));
         context.setVariable("categories", productCategoryDataStore.getAll());
         context.setVariable("products", productService.getProductsForMultipleCategory(category));
         // // Alternative setting of the template context

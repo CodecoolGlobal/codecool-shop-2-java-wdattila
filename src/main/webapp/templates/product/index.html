@@ -41,7 +41,7 @@
 </div>
 
 <div class="card">
-    <strong th:text="${mainCategory.name}">Category Title</strong>
+    <strong th:text="${#strings.listJoin(mainCategoriesNames, ', ')}">Category Title</strong>
 </div>
 <div class="container">
     <div th:replace="category.html :: category"></div>
