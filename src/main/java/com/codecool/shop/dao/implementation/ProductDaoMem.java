@@ -88,4 +88,11 @@ public class ProductDaoMem implements ProductDao {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public List<Product> getMultipleBy(List<ProductCategory> productCategories) {
+        return data.stream()
+                .filter(t -> productCategories.contains(t.getProductCategory()))
+                .collect(Collectors.toList());
+    }
 }
