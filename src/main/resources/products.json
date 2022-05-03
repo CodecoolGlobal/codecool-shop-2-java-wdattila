@@ -23,12 +23,26 @@
       "categoryId": 4,
       "supplierId": 3
     },{
-      "name": "Muckman",
-      "defaultPrice": 15,
+      "name": "Sanic",
+      "defaultPrice": 26.9,
       "defaultCurrency": "EUR",
-      "description": "The Original first addition of the Muckman video game series",
-      "categoryId": 4,
+      "description": "How fast? Sanic fast. Be faster than light with Sanic the hedgehog",
+      "categoryId": 2,
       "supplierId": 3
+    },{
+      "name": "Super Mayro",
+      "defaultPrice": 59.99,
+      "defaultCurrency": "EUR",
+      "description": "The best seller 90's super classic, Super Mayro is finally avaliable on Smoke",
+      "categoryId": 2,
+      "supplierId": 1
+    },{
+      "name": "Somari",
+      "defaultPrice": 30,
+      "defaultCurrency": "EUR",
+      "description": "The fastest man alive is here. Test your reflexes in a fast paced environment with Somari on Smoke",
+      "categoryId": 2,
+      "supplierId": 1
     }
   ]
 }
