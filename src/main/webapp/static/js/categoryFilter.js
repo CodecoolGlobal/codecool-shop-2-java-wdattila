@@ -4,6 +4,12 @@ function HandleSelection(event){
         url.searchParams.append("category", this.dataset.id);
         window.location.href = url.href;
     }
+    else{
+        let url = new URL(window.location.href);
+        url.searchParams.delete("category");
+        window.location.href = url.href;
+    }
 }
 
-document.querySelector("#Tablet").addEventListener("change", HandleSelection);
+document.querySelectorAll(".category")
+    .forEach(el => el.addEventListener("change", HandleSelection));
