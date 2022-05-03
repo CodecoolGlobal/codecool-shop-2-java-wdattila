@@ -2,26 +2,47 @@
   "products":
   [
     {
-      "name": "Amazon",
-      "defaultPrice": 49.9,
+      "name": "Chinpokomon: Myrrh",
+      "defaultPrice": 29.9,
       "defaultCurrency": "EUR",
-      "description": "Fantastic price. Large content ecosystem. Good parental controls. Helpful technical support.",
+      "description": "The next addition of the famous Chinpokomon series. The Myrrh edition contains the legendary chinpokomon Donkeytron.",
       "categoryId": 1,
+      "supplierId": 2
+    },{
+      "name": "Chinpokomon: Platinum",
+      "defaultPrice": 29.9,
+      "defaultCurrency": "EUR",
+      "description": "The next addition of the famous Chinpokomon series. The Platinum edition contains the legendary chinpokomon Lambtron.",
+      "categoryId": 1,
+      "supplierId": 2
+    },{
+      "name": "Muckman",
+      "defaultPrice": 15,
+      "defaultCurrency": "EUR",
+      "description": "The Original first addition of the Muckman video game series",
+      "categoryId": 4,
+      "supplierId": 3
+    },{
+      "name": "Sanic",
+      "defaultPrice": 26.9,
+      "defaultCurrency": "EUR",
+      "description": "How fast? Sanic fast. Be faster than light with Sanic the hedgehog",
+      "categoryId": 2,
+      "supplierId": 3
+    },{
+      "name": "Super Mayro",
+      "defaultPrice": 59.99,
+      "defaultCurrency": "EUR",
+      "description": "The best seller 90's super classic, Super Mayro is finally avaliable on Smoke",
+      "categoryId": 2,
       "supplierId": 1
     },{
-    "name": "Lenovo IdeaPad Miix 700",
-    "defaultPrice": 479,
-    "defaultCurrency": "EUR",
-    "description": "Keyboard cover is included. Fanless Core m5 processor. Full-size USB ports. Adjustable kickstand.",
-    "categoryId": 1,
-    "supplierId": 1
-  },{
-    "name": "Amazon Fire HD 8",
-    "defaultPrice": 89,
-    "defaultCurrency": "EUR",
-    "description": "Amazon's latest Fire HD 8 tablet is a great value for media consumption.",
-    "categoryId": 2,
-    "supplierId": 1
-  }
+      "name": "Somari",
+      "defaultPrice": 30,
+      "defaultCurrency": "EUR",
+      "description": "The fastest man alive is here. Test your reflexes in a fast paced environment with Somari on Smoke",
+      "categoryId": 2,
+      "supplierId": 1
+    }
   ]
 }

@@ -1,22 +1,22 @@
 {
   "categories":
   [
-    {
-      "name": "Tablet",
-      "department": "Hardware",
-      "description": "A tablet computer, commonly shortened to tablet, is a thin, flat mobile computer with a touchscreen display."
-    },{
-    "name": "Phone",
-    "department": "Hardware",
-    "description": "A tablet computer, commonly shortened to tablet, is a thin, flat mobile computer with a touchscreen display."
-  },{
+  {
     "name": "RPG",
-    "department": "Hardware",
-    "description": "A tablet computer, commonly shortened to tablet, is a thin, flat mobile computer with a touchscreen display."
+    "department": "Video game",
+    "description": "Role playing video game type"
+  },{
+    "name": "Platformer",
+    "department": "Video game",
+    "description": "Jumping and puzzle solving video game type."
+  },{
+    "name": "Strategy",
+    "department": "Video game",
+    "description": "Strategic type video game."
   },{
     "name": "Action",
-    "department": "Hardware",
-    "description": "A tablet computer, commonly shortened to tablet, is a thin, flat mobile computer with a touchscreen display."
+    "department": "Video game",
+    "description": "Action type video game."
   }
   ]
 }

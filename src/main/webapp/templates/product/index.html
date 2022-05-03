@@ -7,6 +7,7 @@
 
     <title>Codecool Shop</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <!-- Bootstrap components -->
     <!-- Latest compiled and minified Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -34,6 +35,29 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-sm" style="background-color: #3D424A;">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <div class="btn-nav"><a class="btn btn-secondary" href="#">
+                About
+            </a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="btn-nav"><a class="btn btn-secondary" href="#">
+                Contacts
+            </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li>
+            <div class="btn-nav"><a class="btn btn-success" href="#" style="margin-right: 25px">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            </div>
+        </li>
+    </ul>
+</nav>
 
 <div class="jumbotron text-center">
 
@@ -48,7 +72,7 @@
     <div id="products" class="row row-cols-5">
         <div class="col" th:each="prod,iterStat : ${products}">
             <div class="card">
-                <img height="240" class="" src="/static/img/placeholder.png" th:attr="src='/static/img/product_' + ${prod.id} + '.png'" alt="" />
+                <img height="240" class="product-picture" src="/static/img/placeholder.png" th:attr="src='/static/img/product_' + ${prod.id} + '.png'" alt="" />
                 <div class="card-header">
                     <h4 class="card-title" th:text="${prod.name}">Product name</h4>
                     <p class="card-text" th:text="${prod.description}">Product description... </p>
