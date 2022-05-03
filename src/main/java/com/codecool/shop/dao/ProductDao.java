@@ -11,6 +11,7 @@ public interface ProductDao {
     void add(Product product);
     Product find(int id);
     void remove(int id);
+    void readFromFile(ProductCategoryDao productCategoryDataStore, SupplierDao supplierDataStore);
 
     List<Product> getAll();
     List<Product> getBy(Supplier supplier);
