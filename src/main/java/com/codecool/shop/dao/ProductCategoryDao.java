@@ -12,5 +12,5 @@ public interface ProductCategoryDao {
     void readFromFile();
 
     List<ProductCategory> getAll();
-
+    List<ProductCategory> getMultipleById(String ids);
 }
