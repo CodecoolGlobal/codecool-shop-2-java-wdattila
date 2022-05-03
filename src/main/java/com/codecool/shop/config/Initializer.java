@@ -25,18 +25,24 @@ public class Initializer implements ServletContextListener {
         SupplierDao supplierDataStore = SupplierDaoMem.getInstance();
 
         //setting up a new supplier
-        Supplier amazon = new Supplier("Amazon", "Digital content and services");
-        supplierDataStore.add(amazon);
-        Supplier lenovo = new Supplier("Lenovo", "Computers");
-        supplierDataStore.add(lenovo);
+        Supplier gammaFreak = new Supplier("Gamma Freak", "RPG Video game developer");
+        supplierDataStore.add(gammaFreak);
+        Supplier camco = new Supplier("Camco", "Video game developer");
+        supplierDataStore.add(camco);
 
         //setting up a new product category
-        ProductCategory tablet = new ProductCategory("Tablet", "Hardware", "A tablet computer, commonly shortened to tablet, is a thin, flat mobile computer with a touchscreen display.");
-        productCategoryDataStore.add(tablet);
+        ProductCategory videogame = new ProductCategory("Video games", "Software", "Electronic games, that involves interaction with a user interface or input device to generate visual feedback");
+        productCategoryDataStore.add(videogame);
 
         //setting up products and printing it
-        productDataStore.add(new Product("Amazon", new BigDecimal("49.9"), "USD", "Fantastic price. Large content ecosystem. Good parental controls. Helpful technical support.", tablet, amazon));
-        productDataStore.add(new Product("Lenovo IdeaPad Miix 700", new BigDecimal("479"), "USD", "Keyboard cover is included. Fanless Core m5 processor. Full-size USB ports. Adjustable kickstand.", tablet, lenovo));
-        productDataStore.add(new Product("Amazon Fire HD 8", new BigDecimal("89"), "USD", "Amazon's latest Fire HD 8 tablet is a great value for media consumption.", tablet, amazon));
+        productDataStore.add(new Product("Chinpokomon: Myrrh", new BigDecimal("29.9"), "EUR", "The next addition of the famous Chinpokomon series. The Myrrh edition contains the legendary chinpokomon Donkeytron.", videogame, gammaFreak));
+        productDataStore.add(new Product("Chinpokomon: Platinum", new BigDecimal("29.9"), "EUR", "The next addition of the famous Chinpokomon series. The Platinum edition contains the legendary chinpokomon Lambtron.", videogame, camco));
+        productDataStore.add(new Product("Muckman", new BigDecimal("15"), "EUR", "The Original first addition of the Muckman video game series", videogame, gammaFreak));
+        productDataStore.add(new Product("Sanic", new BigDecimal("20"), "EUR", "The Original first addition of the Muckman video game series", videogame, gammaFreak));
+        productDataStore.add(new Product("Sanic", new BigDecimal("20"), "EUR", "The Original first addition of the Muckman video game series", videogame, gammaFreak));
+        productDataStore.add(new Product("Sanic", new BigDecimal("20"), "EUR", "The Original first addition of the Muckman video game series", videogame, gammaFreak));
+        productDataStore.add(new Product("Sanic", new BigDecimal("20"), "EUR", "The Original first addition of the Muckman video game series", videogame, gammaFreak));
+        productDataStore.add(new Product("Sanic", new BigDecimal("20"), "EUR", "The Original first addition of the Muckman video game series", videogame, gammaFreak));
+
     }
 }
