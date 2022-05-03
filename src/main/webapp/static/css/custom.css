@@ -118,6 +118,9 @@ h1{
     background-color: #333;
     overflow: hidden;
 }
+.product-picture{
+    border: 5px solid #3D424A;
+}
 
 .btn-nav{
     margin-left: 3px;
