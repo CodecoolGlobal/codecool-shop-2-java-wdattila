@@ -27,7 +27,7 @@ public class ProductService{
 
     public List<Product> getProductsForMultipleCategory(String categoryIds){
         List<ProductCategory> categories = productCategoryDao.getMultipleById(categoryIds);
-        return productDao.getMultipleBy(categories);
+        return productDao.getMultipleByCategories(categories);
     }
 
 }
