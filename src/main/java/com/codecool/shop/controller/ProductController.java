@@ -7,6 +7,7 @@ import com.codecool.shop.dao.implementation.ProductCategoryDaoMem;
 import com.codecool.shop.dao.implementation.ProductDaoMem;
 import com.codecool.shop.dao.implementation.SupplierDaoMem;
 import com.codecool.shop.model.BaseModel;
+import com.codecool.shop.model.Product;
 import com.codecool.shop.service.ProductService;
 import com.codecool.shop.config.TemplateEngineUtil;
 import org.thymeleaf.TemplateEngine;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -39,24 +41,28 @@ public class ProductController extends HttpServlet {
 
         String category = "";
         String supplier = "";
+        List<Product> products;
         if(req.getParameterMap().containsKey("category") && !req.getParameterMap().containsKey("supplier")){
             category = req.getParameter("category");
-            context.setVariable("products", productService.getProductsForMultipleCategory(category));
+            products = productService.getProductsForMultipleCategory(category);
         }
         else if(!req.getParameterMap().containsKey("category") && req.getParameterMap().containsKey("supplier")){
             supplier = req.getParameter("supplier");
-            context.setVariable("products", productService.getProductsForMultipleSupplier(supplier));
+            products = productService.getProductsForMultipleSupplier(supplier);
         }
         else if(!req.getParameterMap().containsKey("category") && !req.getParameterMap().containsKey("supplier")){
-            context.setVariable("products", productDataStore.getAll());
+            products = productDataStore.getAll();
         }
         else {
             supplier = req.getParameter("supplier");
             category = req.getParameter("category");
-            context.setVariable("products", productService.getProductsForMultipleCategorySupplier(category, supplier));
+            products = productService.getProductsForMultipleCategorySupplier(category, supplier);
         }
 
         context.setVariable("mainCategories", productCategoryDataStore.getMultipleById(category));
+        context.setVariable("mainSuppliers", supplierDataStore.getMultipleById(supplier));
+
+        context.setVariable("products", products);
 
         engine.process("product/index.html", context, resp.getWriter());
     }

@@ -7,7 +7,8 @@
         <input type="checkbox" class="supplier" id="supplier" name="supplier"
                th:id="${supplier.name}"
                th:name="${supplier.name}"
-               th:attr="data-id=${supplier.id}">
+               th:attr="data-id=${supplier.id}"
+               th:checked="${mainSuppliers.contains(supplier)}">
         <label for="supplier" th:for="${supplier.name}" th:text="${supplier.name}">Supplier</label>
     </div>
 </div>
