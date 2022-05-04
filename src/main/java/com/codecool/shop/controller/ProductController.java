@@ -29,9 +29,6 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ProductDao productDataStore = ProductDaoMem.getInstance();
-        ProductCategoryDao productCategoryDataStore = ProductCategoryDaoMem.getInstance();
-        SupplierDao supplierDataStore = SupplierDaoMem.getInstance();
         ProductService productService = new ProductService();
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
@@ -41,11 +38,11 @@ public class ProductController extends HttpServlet {
         String supplier = req.getParameterMap().containsKey("supplier") ? req.getParameter("supplier") : "";
         List<Product> products = productService.getProductsForMultipleCategorySupplier(category, supplier);
 
-        context.setVariable("categories", productCategoryDataStore.getAll());
-        context.setVariable("suppliers", supplierDataStore.getAll());
+        context.setVariable("categories", productService.getAllCategory());
+        context.setVariable("suppliers", productService.getAllSupplier());
 
-        context.setVariable("mainCategories", productCategoryDataStore.getMultipleById(category));
-        context.setVariable("mainSuppliers", supplierDataStore.getMultipleById(supplier));
+        context.setVariable("mainCategories", productService.getCategoryByIds(category));
+        context.setVariable("mainSuppliers", productService.getSupplierByIds(supplier));
 
         context.setVariable("products", products);
         context.setVariable("relevantCategories", products.stream()
