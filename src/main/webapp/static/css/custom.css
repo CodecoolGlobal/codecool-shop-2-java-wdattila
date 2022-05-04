@@ -92,7 +92,7 @@ body>.card{
     margin-left: 0px;
 }
 
-.categories{
+.categories, .suppliers{
     color: white;
     flex-shrink: 0;
     width: 175px;

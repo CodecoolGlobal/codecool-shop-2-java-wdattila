@@ -1,6 +1,7 @@
 package com.codecool.shop.dao.implementation;
 
 import com.codecool.shop.dao.SupplierDao;
+import com.codecool.shop.model.ProductCategory;
 import com.codecool.shop.model.Supplier;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -9,7 +10,9 @@ import com.google.gson.JsonObject;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SupplierDaoMem implements SupplierDao {
 
@@ -65,5 +68,12 @@ public class SupplierDaoMem implements SupplierDao {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public List<Supplier> getMultipleById(String ids) {
+        return data.stream()
+                .filter(category -> Arrays.asList(ids.split(",")).contains(String.valueOf(category.getId())))
+                .collect(Collectors.toList());
     }
 }
