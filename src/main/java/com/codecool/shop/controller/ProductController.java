@@ -32,24 +32,32 @@ public class ProductController extends HttpServlet {
         SupplierDao supplierDataStore = SupplierDaoMem.getInstance();
         ProductService productService = new ProductService();
 
-        String category = "1";
-        if(req.getParameterMap().containsKey("category")){
-            category = req.getParameter("category");
-        }
-
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
-        context.setVariable("mainCategories", productCategoryDataStore.getMultipleById(category));
-        context.setVariable("mainCategoriesNames", productCategoryDataStore.getMultipleById(category).stream()
-                .map(BaseModel::getName).collect(Collectors.toList()));
         context.setVariable("categories", productCategoryDataStore.getAll());
         context.setVariable("suppliers", supplierDataStore.getAll());
-        context.setVariable("products", productService.getProductsForMultipleCategory(category));
-        // // Alternative setting of the template context
-        // Map<String, Object> params = new HashMap<>();
-        // params.put("category", productCategoryDataStore.find(1));
-        // params.put("products", productDataStore.getBy(productCategoryDataStore.find(1)));
-        // context.setVariables(params);
+
+        String category = "";
+        String supplier = "";
+        if(req.getParameterMap().containsKey("category") && !req.getParameterMap().containsKey("supplier")){
+            category = req.getParameter("category");
+            context.setVariable("products", productService.getProductsForMultipleCategory(category));
+        }
+        else if(!req.getParameterMap().containsKey("category") && req.getParameterMap().containsKey("supplier")){
+            supplier = req.getParameter("supplier");
+            context.setVariable("products", productService.getProductsForMultipleSupplier(supplier));
+        }
+        else if(!req.getParameterMap().containsKey("category") && !req.getParameterMap().containsKey("supplier")){
+            context.setVariable("products", productDataStore.getAll());
+        }
+        else {
+            supplier = req.getParameter("supplier");
+            category = req.getParameter("category");
+            context.setVariable("products", productService.getProductsForMultipleCategorySupplier(category, supplier));
+        }
+
+        context.setVariable("mainCategories", productCategoryDataStore.getMultipleById(category));
+
         engine.process("product/index.html", context, resp.getWriter());
     }
 
