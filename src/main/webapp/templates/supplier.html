@@ -8,7 +8,8 @@
                th:id="${supplier.name}"
                th:name="${supplier.name}"
                th:attr="data-id=${supplier.id}"
-               th:checked="${mainSuppliers.contains(supplier)}">
+               th:checked="${mainSuppliers.contains(supplier)}"
+               th:disabled="${!relevantSuppliers.contains(supplier)}">
         <label for="supplier" th:for="${supplier.name}" th:text="${supplier.name}">Supplier</label>
     </div>
 </div>

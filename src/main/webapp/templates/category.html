@@ -8,7 +8,8 @@
                th:id="${category.name}"
                th:name="${category.name}"
                th:attr="data-id=${category.id}"
-               th:checked="${mainCategories.contains(category)}">
+               th:checked="${mainCategories.contains(category)}"
+               th:disabled="${!relevantCategories.contains(category)}">
         <label for="category" th:for="${category.name}" th:text="${category.name}">Category</label>
     </div>
 </div>

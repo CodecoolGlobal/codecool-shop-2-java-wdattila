@@ -63,6 +63,12 @@ public class ProductController extends HttpServlet {
         context.setVariable("mainSuppliers", supplierDataStore.getMultipleById(supplier));
 
         context.setVariable("products", products);
+        context.setVariable("relevantCategories", products.stream()
+                .map(Product::getProductCategory)
+                .collect(Collectors.toList()));
+        context.setVariable("relevantSuppliers", products.stream()
+                .map(Product::getSupplier)
+                .collect(Collectors.toList()));
 
         engine.process("product/index.html", context, resp.getWriter());
     }
