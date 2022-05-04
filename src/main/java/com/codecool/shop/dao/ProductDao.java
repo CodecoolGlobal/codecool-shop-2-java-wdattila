@@ -18,5 +18,5 @@ public interface ProductDao {
     List<Product> getBy(ProductCategory productCategory);
     List<Product> getMultipleByCategories(List<ProductCategory> productCategories);
     List<Product> getMultipleBySuppliers(List<Supplier> suppliers);
-    List<Product> getMultipleBySuppliersCategories(List<ProductCategory> productCategories, List<Supplier> suppliers);
+    List<Product> getMultipleByCategoriesSuppliers(List<ProductCategory> productCategories, List<Supplier> suppliers);
 }

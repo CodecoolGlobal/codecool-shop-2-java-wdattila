@@ -104,7 +104,7 @@ public class ProductDaoMem implements ProductDao {
     }
 
     @Override
-    public List<Product> getMultipleBySuppliersCategories(List<ProductCategory> productCategories, List<Supplier> suppliers) {
+    public List<Product> getMultipleByCategoriesSuppliers(List<ProductCategory> productCategories, List<Supplier> suppliers) {
         return data.stream()
                 .filter(t -> suppliers.contains(t.getSupplier()) && productCategories.contains(t.getProductCategory()))
                 .collect(Collectors.toList());

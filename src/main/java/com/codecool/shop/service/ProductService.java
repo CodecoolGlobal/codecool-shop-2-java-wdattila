@@ -42,4 +42,9 @@ public class ProductService{
         return productDao.getMultipleBySuppliers(suppliers);
     }
 
+    public List<Product> getProductsForMultipleCategorySupplier(String categoryIds, String supplierIds){
+        List<Supplier> suppliers = supplierDao.getMultipleById(supplierIds);
+        List<ProductCategory> categories = productCategoryDao.getMultipleById(categoryIds);
+        return productDao.getMultipleByCategoriesSuppliers(categories, suppliers);
+    }
 }
