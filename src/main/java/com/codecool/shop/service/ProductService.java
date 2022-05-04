@@ -43,8 +43,22 @@ public class ProductService{
     }
 
     public List<Product> getProductsForMultipleCategorySupplier(String categoryIds, String supplierIds){
-        List<Supplier> suppliers = supplierDao.getMultipleById(supplierIds);
-        List<ProductCategory> categories = productCategoryDao.getMultipleById(categoryIds);
+        List<Supplier> suppliers;
+        if(supplierIds == null || supplierIds.equals("")) {
+            suppliers = supplierDao.getAll();
+        }
+        else {
+            suppliers = supplierDao.getMultipleById(supplierIds);
+        }
+
+        List<ProductCategory> categories;
+        if(categoryIds == null || categoryIds.equals("")) {
+            categories = productCategoryDao.getAll();
+        }
+        else {
+            categories = productCategoryDao.getMultipleById(categoryIds);
+        }
+
         return productDao.getMultipleByCategoriesSuppliers(categories, suppliers);
     }
 }

@@ -36,28 +36,13 @@ public class ProductController extends HttpServlet {
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
+
+        String category = req.getParameterMap().containsKey("category") ? req.getParameter("category") : "";
+        String supplier = req.getParameterMap().containsKey("supplier") ? req.getParameter("supplier") : "";
+        List<Product> products = productService.getProductsForMultipleCategorySupplier(category, supplier);
+
         context.setVariable("categories", productCategoryDataStore.getAll());
         context.setVariable("suppliers", supplierDataStore.getAll());
-
-        String category = "";
-        String supplier = "";
-        List<Product> products;
-        if(req.getParameterMap().containsKey("category") && !req.getParameterMap().containsKey("supplier")){
-            category = req.getParameter("category");
-            products = productService.getProductsForMultipleCategory(category);
-        }
-        else if(!req.getParameterMap().containsKey("category") && req.getParameterMap().containsKey("supplier")){
-            supplier = req.getParameter("supplier");
-            products = productService.getProductsForMultipleSupplier(supplier);
-        }
-        else if(!req.getParameterMap().containsKey("category") && !req.getParameterMap().containsKey("supplier")){
-            products = productDataStore.getAll();
-        }
-        else {
-            supplier = req.getParameter("supplier");
-            category = req.getParameter("category");
-            products = productService.getProductsForMultipleCategorySupplier(category, supplier);
-        }
 
         context.setVariable("mainCategories", productCategoryDataStore.getMultipleById(category));
         context.setVariable("mainSuppliers", supplierDataStore.getMultipleById(supplier));
