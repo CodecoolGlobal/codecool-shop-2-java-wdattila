@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -107,6 +108,13 @@ public class ProductDaoMem implements ProductDao {
     public List<Product> getMultipleByCategoriesSuppliers(List<ProductCategory> productCategories, List<Supplier> suppliers) {
         return data.stream()
                 .filter(t -> suppliers.contains(t.getSupplier()) && productCategories.contains(t.getProductCategory()))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Product> getMultipleById(String ids) {
+        return data.stream()
+                .filter(category -> Arrays.asList(ids.split(",")).contains(String.valueOf(category.getId())))
                 .collect(Collectors.toList());
     }
 }
