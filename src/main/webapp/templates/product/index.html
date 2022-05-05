@@ -30,8 +30,10 @@
 
     <!-- End of Bootstrap components -->
 
-    <link rel="stylesheet" type="text/css" href="/static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/custom.css"/>
+    <script src='/static/js/shoppingCartJs.js' type="module"></script>
     <script src='/static/js/filter.js' type="module"></script>
+
 </head>
 
 <body>
@@ -52,8 +54,10 @@
     </ul>
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li>
-            <div class="btn-nav"><a class="btn btn-success" href="#" style="margin-right: 25px">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </a>
+            <div class="btn-nav"><button type="button" class="btn btn-success" style="margin-right: 25px"
+                                         data-bs-toggle="modal" data-bs-target="#exampleModal">My Cart
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
             </div>
         </li>
     </ul>
@@ -88,7 +92,7 @@
                         <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
                     </div>
                     <div class="card-text">
-                        <a class="btn btn-success" href="#">Add to cart</a>
+                        <a class="btn btn-success addToCart" th:attr="productID=${prod.id}" href="#">Add to cart</a>
                     </div>
                 </div>
             </div>
@@ -97,6 +101,7 @@
 
 </div>
 
+<div th:replace="ShoppingCartModal.html :: modal"></div>
 <div th:replace="footer.html :: copy"></div>
 
 </body>

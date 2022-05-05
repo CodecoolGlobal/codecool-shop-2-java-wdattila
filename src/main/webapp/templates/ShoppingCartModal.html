@@ -1,0 +1,46 @@
+<button id="myBtn">Open Modal</button>
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" th:fragment="modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Shopping Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Sum</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cartItems">
+                        <tr>
+                            <td>Sanic</td>
+                            <td>26.9 EUR</td>
+                            <td><input type="number" min="0" max="100" step="1" value="1"></td>
+                            <td>26.9 EUR</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Continue to Payment</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
