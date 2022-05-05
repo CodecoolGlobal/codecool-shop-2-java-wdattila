@@ -114,6 +114,7 @@ function isEmptyCart(){
 async function handlePaymentClick(event){
     let data = await dataHandler.get_payment_info(localStorage);
     postToPayment(data)
+    localStorage.clear()
 }
 
 function postToPayment(data){
