@@ -60,8 +60,9 @@ public class OrderController extends HttpServlet {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
 
-        logger.info(shoppingCartService.toString());
+        logger.info(String.valueOf(shoppingCartService.getCartTotalPriceStringById(1)));
         context.setVariable("cart", shoppingCartService.getCartDataById(1));
+        context.setVariable("totalPrice", shoppingCartService.getCartTotalPriceStringById(1));
         engine.process("order.html", context, resp.getWriter());
     }
 }
