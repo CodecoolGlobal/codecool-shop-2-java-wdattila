@@ -61,6 +61,10 @@ public class Product extends BaseModel {
         this.supplier.addProduct(this);
     }
 
+    public BigDecimal getPriceValue(){
+        return defaultPrice;
+    }
+
     @Override
     public String toString() {
         return String.format("id: %1$d, " +
