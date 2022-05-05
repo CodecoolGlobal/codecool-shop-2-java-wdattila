@@ -118,8 +118,7 @@
           <div class="collapse show p-3 pt-0" id="collapseExample2">
             <div class="row">
               <div class="col">
-<!--                th:action="${payment.url}"-->
-                <form action="" class="form" method="post">
+                <form action="" class="form" method="post" th:action="${url}">
                   <div class="row">
 
                     <div class="col-12">
@@ -250,8 +249,8 @@
                       </div>
                     </div>
                     <div class="col-12">
-<!--                      th:text="${"Pay" + payment.price + "EUR"}"-->
-                      <button type="submit" class="btn btn-primary w-25"> Pay 0.00 EUR</button>
+<!--                      -->
+                      <button type="submit" class="btn btn-primary w-25" th:text="${'Pay ' + price + ' EUR'}"> Pay 0.00 EUR</button>
                     </div>
                   </div>
                 </form>
