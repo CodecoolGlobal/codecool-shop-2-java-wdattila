@@ -87,6 +87,11 @@ body>.card{
     background: #3D424A;
 }
 
+body>div>.card{
+    color: white;
+    background: #3D424A;
+}
+
 .container{
     display: flex;
     margin-left: 0px;
