@@ -23,7 +23,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @WebServlet(urlPatterns = {"/api/payment"})
@@ -55,7 +57,9 @@ public class PaymentAPIController extends HttpServlet {
         products.keySet().
                 forEach(p -> cartService.addProductToCartById(cart.getId(), Integer.parseInt(p), products.get(p).getAsInt()));
 
+        Map<String, String> params = new HashMap<>();
+        params.put("totalPrice", String.valueOf(cart.getTotalPrice()));
         PrintWriter out = resp.getWriter();
-        out.println(gson.toJson(products));
+        out.println(gson.toJson(params));
     }
 }
