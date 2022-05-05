@@ -60,7 +60,7 @@ public class PaymentAPIController extends HttpServlet {
         Map<String, String> params = new HashMap<>();
         params.put("totalPrice", String.valueOf(cart.getTotalPrice()));
         params.put("targetUrl", "/payment");
-        params.put("backToUrl", "/order");
+        params.put("backToUrl", "/order?orderId=" + cart.getId());
 
         PrintWriter out = resp.getWriter();
         out.println(gson.toJson(params));
