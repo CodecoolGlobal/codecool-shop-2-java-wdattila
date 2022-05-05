@@ -16,9 +16,16 @@ import java.io.IOException;
 public class PaymentController extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
         WebContext context = new WebContext(request, response, request.getServletContext());
+
+        String totalPrice = request.getParameterMap().containsKey("totalPrice") ? request.getParameter("totalPrice") : "";
+        String backToUrl = request.getParameterMap().containsKey("backToUrl") ? request.getParameter("backToUrl") : "";
+
+        context.setVariable("price", totalPrice);
+        context.setVariable("url", backToUrl);
+
         engine.process("paymentPage.html", context, response.getWriter());
     }
 }
