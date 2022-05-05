@@ -77,4 +77,8 @@ public class ProductService{
     public List<Supplier> getAllSupplier(){
         return supplierDao.getAll();
     }
+
+    public List<Product> getProductsByIds(String productIds){
+        return productIds != null ? productDao.getMultipleById(productIds) : null;
+    }
 }
