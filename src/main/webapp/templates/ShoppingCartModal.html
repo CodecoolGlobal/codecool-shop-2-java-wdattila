@@ -13,31 +13,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div>
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th scope="col">Product Name</th>
-                            <th scope="col">Unit Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Sum</th>
-                        </tr>
-                        </thead>
-                        <tbody id="cartItems">
-                        <tr>
-                            <td>Sanic</td>
-                            <td>26.9 EUR</td>
-                            <td><input type="number" min="0" max="100" step="1" value="1"></td>
-                            <td>26.9 EUR</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div id="cartItems">
+                    <p>The cart is Empty!</p>
                 </div>
             </div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Continue to Payment</button>
+                <button type="button" id="paymentButton" class="btn btn-primary">Continue to Payment</button>
             </div>
         </div>
     </div>
