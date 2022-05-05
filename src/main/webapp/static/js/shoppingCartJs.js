@@ -3,7 +3,7 @@ import {dataHandler} from "./dataHandler.js";
 function initAddToCart(){
     const addButtons = document.getElementsByClassName("addToCart")
     for (let addButton of addButtons){
-        addButton.addEventListener("click",addProductToSession)
+        addButton.addEventListener("click",addProduct)
     }
 }
 
@@ -17,6 +17,20 @@ function initChangeQuantity(){
 async function loadCart(){
     const productsData = await getProductsForCart()
     insertProductDataToModal(productsData)
+}
+
+function enablePaymentButton(){
+    const paymentButton = document.getElementById("paymentButton")
+    if(paymentButton.disabled){
+        paymentButton.removeAttribute("disabled")
+    }
+
+}
+
+function addProduct(e){
+    addProductToSession(e)
+    loadCart()
+    enablePaymentButton()
 }
 
 async function addProductToSession(click){
@@ -37,7 +51,15 @@ function getProductsForCart(){
 
 function insertProductDataToModal(productsData){
     const cartList = document.getElementById("cartItems")
-    let productRows = ""
+    let productRows = "<table class=\"table table-bordered\">" +
+        "<thead>" +
+            "<tr>" +
+            "<th class=\"col col-4\">Product Name</th>" +
+            "<th class=\"col col-2\">Unit Price</th>" +
+            "<th class=\"col col-2\">Quantity</th>" +
+            "<th class=\"col col-3\">Sum</th>" +
+        "</tr>" +
+        "<tbody>"
     let overallPrice = 0;
     for (const productData of productsData) {
         let productQuantity = localStorage.getItem(String(productData["id"]))
@@ -46,14 +68,17 @@ function insertProductDataToModal(productsData){
         productRows+="<tr>" +
                         `<td>${productData["name"]}</td>` +
                         `<td>${productData["defaultPrice"]} EUR</td>` +
-                        `<td><input data-product-id=${productData["id"]} class="productQuantity" type="number" 
+                        `<td><input data-product-id=${productData["id"]} class="productQuantity" type="number" width='10px'
                             min="0" max="100" step="1" value=${productQuantity}></td>` +
                         `<td>${productSum.toFixed(2)} EUR</td>` +
                     "</tr>"
     }
     productRows+="<tr>" +
-        "<td colspan='3'></td>" +
-        `<td class='overallValue'>${overallPrice.toFixed(2)} EUR</td>`
+        "<td colspan='2'></td>" +
+        "<td style='text-align: right'><strong>Overall Price:</strong> </td>"+
+        `<td class='overallValue'>${overallPrice.toFixed(2)} EUR</td>`+
+        "</tr>" +
+        "</table>"
     cartList.innerHTML=productRows
     initChangeQuantity()
 }
@@ -64,9 +89,29 @@ function changeProductQuantity(e){
     localStorage.setItem(productId,quantity)
     if(parseInt(localStorage.getItem(productId)) === 0){
         localStorage.removeItem(productId)
+        if(!isEmptyCart()){
+            manageEmptyCart()
+        }else {
+            loadCart()
+        }
+    }else{
+        loadCart()
     }
-    loadCart()
+
+}
+
+function manageEmptyCart(){
+    const paymentButton = document.getElementById("paymentButton")
+    const cartModal = document.getElementById("cartItems")
+    paymentButton.setAttribute("disabled","true")
+    cartModal.innerHTML = "<p>The cart is Empty!</p>"
+}
+
+function isEmptyCart(){
+    return Object.keys(localStorage).length > 0
 }
 
 initAddToCart()
-loadCart()
+if(isEmptyCart()){
+    loadCart()
+}
