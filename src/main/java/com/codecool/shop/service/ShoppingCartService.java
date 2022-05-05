@@ -8,6 +8,7 @@ import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ShoppingCart;
 
 import java.util.List;
+import java.util.Map;
 
 public class ShoppingCartService {
     private ShoppingCartDao shoppingCartDao;
@@ -24,5 +25,9 @@ public class ShoppingCartService {
 
     public void addProductToCartById(int cartId, int productId, int quantity){
         shoppingCartDao.find(cartId).addProduct(productDao.find(productId), quantity);
+    }
+
+    public Map<Product, Integer> getCartDataById(int id){
+        return shoppingCartDao.find(id).getProducts();
     }
 }
