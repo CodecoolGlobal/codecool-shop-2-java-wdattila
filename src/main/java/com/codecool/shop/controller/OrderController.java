@@ -33,6 +33,10 @@ public class OrderController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Received GET request");
+        int orderId = 1;
+        if(req.getParameterMap().containsKey("orderId")){
+            orderId = Integer.parseInt(req.getParameter("orderId"));
+        }
 
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
@@ -42,8 +46,8 @@ public class OrderController extends HttpServlet {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
 
-        context.setVariable("cart", shoppingCartService.getCartDataById(1));
-        context.setVariable("totalPrice", shoppingCartService.getCartTotalPriceStringById(1));
+        context.setVariable("cart", shoppingCartService.getCartDataById(orderId));
+        context.setVariable("totalPrice", shoppingCartService.getCartTotalPriceStringById(orderId));
         context.setVariable("mainPage", "/");
         engine.process("order.html", context, resp.getWriter());
     }
@@ -51,6 +55,10 @@ public class OrderController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Received POST request");
+        int orderId = 1;
+        if(req.getParameterMap().containsKey("orderId")){
+            orderId = Integer.parseInt(req.getParameter("orderId"));
+        }
 
         ShoppingCartService shoppingCartService = new ShoppingCartService();
 
@@ -62,9 +70,9 @@ public class OrderController extends HttpServlet {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
 
-        logger.info(String.valueOf(shoppingCartService.getCartTotalPriceStringById(1)));
+        logger.info(String.valueOf(shoppingCartService.getCartTotalPriceStringById(orderId)));
         context.setVariable("cart", shoppingCartService.getCartDataById(1));
-        context.setVariable("totalPrice", shoppingCartService.getCartTotalPriceStringById(1));
+        context.setVariable("totalPrice", shoppingCartService.getCartTotalPriceStringById(orderId));
         context.setVariable("mainPage", "/");
         engine.process("order.html", context, resp.getWriter());
     }
