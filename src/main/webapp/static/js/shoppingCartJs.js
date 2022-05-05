@@ -68,5 +68,12 @@ function changeProductQuantity(e){
     loadCart()
 }
 
+async function handlePaymentClick(event){
+    let data = await dataHandler.get_payment_info(localStorage);
+    console.log(data);
+}
+
 initAddToCart()
 loadCart()
+
+document.querySelector("#payment").addEventListener("click", handlePaymentClick);
