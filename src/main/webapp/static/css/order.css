@@ -1,17 +1,50 @@
-.gradient-custom {
-    height: 100vh;
-    /* fallback for old browsers */
-    background: #49cef0;
-
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to top left, rgba(73, 206, 240, 1), rgba(246, 243, 255, 1));
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to top left, rgba(73, 206, 240, 1), rgba(246, 243, 255, 1))
-}
-
 .card-footer{
     background-color: #498cf0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+}
+
+:root {
+    --background-color: #ffe5e5;
+    --color: #000000;
+    --feedback-bg-color: #ffffff;
+    --feedback-secondary-color: #ffacac;
+    --feedback-primary-color: #53488d;
+    --feedback-icon-color: #ffffff;
+    --feedback-form-input: #f4f4f4;
+}
+
+.container {
+    height: 100vh;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 24px;
+    cursor: pointer;
+
+    border-radius: 7px 7px 7px 0;
+}
+
+button:hover {
+     border-radius: 0px;
+
+     color: var(--feedback-primary-color);
+     background-color: var(--background-color);
+
+ }
+
+a{
+    text-decoration: none;
+    color: #333333;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #333333;
 }

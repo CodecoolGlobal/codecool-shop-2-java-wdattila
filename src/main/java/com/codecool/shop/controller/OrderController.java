@@ -43,6 +43,8 @@ public class OrderController extends HttpServlet {
         WebContext context = new WebContext(req, resp, req.getServletContext());
 
         context.setVariable("cart", shoppingCartService.getCartDataById(1));
+        context.setVariable("totalPrice", shoppingCartService.getCartTotalPriceStringById(1));
+        context.setVariable("mainPage", "/");
         engine.process("order.html", context, resp.getWriter());
     }
 
@@ -63,6 +65,7 @@ public class OrderController extends HttpServlet {
         logger.info(String.valueOf(shoppingCartService.getCartTotalPriceStringById(1)));
         context.setVariable("cart", shoppingCartService.getCartDataById(1));
         context.setVariable("totalPrice", shoppingCartService.getCartTotalPriceStringById(1));
+        context.setVariable("mainPage", "/");
         engine.process("order.html", context, resp.getWriter());
     }
 }

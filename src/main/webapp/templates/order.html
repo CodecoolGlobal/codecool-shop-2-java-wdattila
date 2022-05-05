@@ -49,7 +49,7 @@
                                         <div class="row d-flex justify-content-between pt-2" th:each="product: ${cart.keySet()}">
                                             <div class="col-md-2">
                                                 <img src=""
-                                                     class="img-fluid" th:attr="src='/static/img/product_' + ${product.getId()} + '.png'" alt="">
+                                                     th:attr="src='/static/img/product_' + ${product.getId()} + '.png'" alt="">
                                             </div>
                                             <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
                                                 <p class="text-muted mb-0" th:text="${product.getName()}"></p>
@@ -71,9 +71,11 @@
                             </div>
                         </div>
                         <div class="card-footer border-0 px-4 py-5">
+                            <button><a href="#" th:href="${mainPage}">Back to Main Page</a></button>
                             <h5 class="d-flex align-items-center justify-content-end text-uppercase mb-0">Total
                                 paid: <span class="h2 mb-0 ms-2" th:text="${totalPrice}"></span></h5>
                         </div>
+
                     </div>
                 </div>
             </div>
