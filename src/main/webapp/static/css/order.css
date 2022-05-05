@@ -1,4 +1,5 @@
 .gradient-custom {
+    height: 100vh;
     /* fallback for old browsers */
     background: #49cef0;
 
@@ -7,4 +8,10 @@
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to top left, rgba(73, 206, 240, 1), rgba(246, 243, 255, 1))
+}
+
+.card-footer{
+    background-color: #498cf0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

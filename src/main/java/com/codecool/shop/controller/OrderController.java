@@ -37,14 +37,20 @@ public class OrderController extends HttpServlet {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
 
+        ShoppingCartService shoppingCartService = new ShoppingCartService();
+
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
+
+        context.setVariable("cart", shoppingCartService.getCartDataById(1));
         engine.process("order.html", context, resp.getWriter());
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Received POST request");
+
+        ShoppingCartService shoppingCartService = new ShoppingCartService();
 
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
@@ -53,6 +59,9 @@ public class OrderController extends HttpServlet {
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
+
+        logger.info(shoppingCartService.toString());
+        context.setVariable("cart", shoppingCartService.getCartDataById(1));
         engine.process("order.html", context, resp.getWriter());
     }
 }
