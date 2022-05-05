@@ -1,0 +1,8 @@
+{
+  "timestamp" : "2022-05-05 10:08:56.424",
+  "level" : "INFO",
+  "thread" : "qtp856432481-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Hello World",
+  "context" : "default"
+}
