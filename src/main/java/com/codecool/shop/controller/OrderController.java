@@ -71,7 +71,7 @@ public class OrderController extends HttpServlet {
         WebContext context = new WebContext(req, resp, req.getServletContext());
 
         logger.info(String.valueOf(shoppingCartService.getCartTotalPriceStringById(orderId)));
-        context.setVariable("cart", shoppingCartService.getCartDataById(1));
+        context.setVariable("cart", shoppingCartService.getCartDataById(orderId));
         context.setVariable("totalPrice", shoppingCartService.getCartTotalPriceStringById(orderId));
         context.setVariable("mainPage", "/");
         engine.process("order.html", context, resp.getWriter());
