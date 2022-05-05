@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 @WebServlet(urlPatterns = {"/api/payment"})
 public class PaymentAPIController extends HttpServlet {
     private static final Logger logger
-            = (Logger) LoggerFactory.getLogger(ProductController.class);
+            = (Logger) LoggerFactory.getLogger(PaymentAPIController.class);
     private Gson gson = new Gson();
 
     @Override
