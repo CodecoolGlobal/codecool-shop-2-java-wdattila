@@ -1,5 +1,6 @@
 package com.codecool.shop.model;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +25,23 @@ public class ShoppingCart extends BaseModel{
         this.products.put(product, quantity);
     }
 
-    public int getTotalPrice(){
-        int sum = 0;
+    public BigDecimal getTotalPrice(){
+        BigDecimal sum = new BigDecimal(0);
         for (Product product: products.keySet()) {
-            sum+=product.getPriceValue().intValue();
+            sum = sum.add(product.getPriceValue().multiply(BigDecimal.valueOf(products.get(product))));
         }
         return sum;
+    }
+
+    public String getTotalPriceString() {
+        return String.valueOf(getTotalPrice()) + " " + getCurrency();
+    }
+
+    public String getCurrency(){
+        return products.keySet().stream()
+                .map(product -> product.getDefaultCurrency().toString())
+                .findFirst()
+                .orElse("");
     }
 
     @Override
