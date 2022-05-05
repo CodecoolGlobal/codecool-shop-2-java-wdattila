@@ -20,7 +20,7 @@ async function loadCart(){
 }
 
 function enablePaymentButton(){
-    const paymentButton = document.getElementById("paymentButton")
+    const paymentButton = document.getElementById("payment")
     if(paymentButton.disabled){
         paymentButton.removeAttribute("disabled")
     }
@@ -101,7 +101,7 @@ function changeProductQuantity(e){
 }
 
 function manageEmptyCart(){
-    const paymentButton = document.getElementById("paymentButton")
+    const paymentButton = document.getElementById("payment")
     const cartModal = document.getElementById("cartItems")
     paymentButton.setAttribute("disabled","true")
     cartModal.innerHTML = "<p>The cart is Empty!</p>"
@@ -119,7 +119,7 @@ async function handlePaymentClick(event){
 function postToPayment(data){
     const form = document.createElement('form');
     form.method = 'POST';
-    form.action = new URL(data.backToUrl, window.location.href).href;
+    form.action = new URL(data.targetUrl, window.location.href).href;
     document.body.appendChild(form);
 
     for (const key in data) {
