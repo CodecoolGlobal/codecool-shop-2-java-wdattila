@@ -70,7 +70,24 @@ function changeProductQuantity(e){
 
 async function handlePaymentClick(event){
     let data = await dataHandler.get_payment_info(localStorage);
-    console.log(data);
+    postToPayment(data)
+}
+
+function postToPayment(data){
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = new URL(data.backToUrl, window.location.href).href;
+    document.body.appendChild(form);
+
+    for (const key in data) {
+        const formField = document.createElement('input');
+        formField.type = 'hidden';
+        formField.name = key;
+        formField.value = data[key];
+
+        form.appendChild(formField);
+    }
+    form.submit();
 }
 
 initAddToCart()
