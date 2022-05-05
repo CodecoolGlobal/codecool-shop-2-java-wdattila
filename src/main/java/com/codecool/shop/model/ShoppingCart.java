@@ -24,6 +24,14 @@ public class ShoppingCart extends BaseModel{
         this.products.put(product, quantity);
     }
 
+    public int getTotalPrice(){
+        int sum = 0;
+        for (Product product: products.keySet()) {
+            sum+=product.getPriceValue().intValue();
+        }
+        return sum;
+    }
+
     @Override
     public String toString() {
         return String.format("id: %1$d, " +
