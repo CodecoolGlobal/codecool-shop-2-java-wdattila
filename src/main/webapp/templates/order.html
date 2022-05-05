@@ -45,32 +45,34 @@
                             </div>
                             <div class="card shadow-0 border mb-4">
                                 <div class="card-body">
-                                    <div class="row d-flex justify-content-between pt-2" th:each="product: ${cart.keySet()}">
-                                        <div class="col-md-2">
-                                            <img src=""
-                                                 class="img-fluid" th:attr="src='/static/img/product_' + ${product.getId()} + '.png'" alt="">
+                                    <th:block th:if="${cart!=null}">
+                                        <div class="row d-flex justify-content-between pt-2" th:each="product: ${cart.keySet()}">
+                                            <div class="col-md-2">
+                                                <img src=""
+                                                     class="img-fluid" th:attr="src='/static/img/product_' + ${product.getId()} + '.png'" alt="">
+                                            </div>
+                                            <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                                <p class="text-muted mb-0" th:text="${product.getName()}"></p>
+                                            </div>
+                                            <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                                <p class="text-muted mb-0 small" th:text="'Qty: ' + ${cart.get(product)}"></p>
+                                            </div>
+                                            <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                                <p class="text-muted mb-0 small" th:text="${product.getPrice()}"></p>
+                                            </div>
                                         </div>
-                                        <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
-                                            <p class="text-muted mb-0" th:text="${product.getName()}"></p>
-                                        </div>
-                                        <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
-                                            <p class="text-muted mb-0 small" th:text="'Qty: ' + ${cart.get(product)}"></p>
-                                        </div>
-                                        <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
-                                            <p class="text-muted mb-0 small" th:text="${product.getPrice()}"></p>
-                                        </div>
-                                    </div>
+                                    </th:block>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-between pt-2">
                                 <p class="fw-bold mb-0"></p>
-                                <p class="text-muted mb-0"><span class="fw-bold me-4">Total</span> $898.00</p>
+                                <p class="text-muted mb-0" th:text="${totalPrice}"><span class="fw-bold me-4">Total</span> </p>
                             </div>
                         </div>
                         <div class="card-footer border-0 px-4 py-5">
                             <h5 class="d-flex align-items-center justify-content-end text-uppercase mb-0">Total
-                                paid: <span class="h2 mb-0 ms-2">$1040</span></h5>
+                                paid: <span class="h2 mb-0 ms-2" th:text="${totalPrice}"></span></h5>
                         </div>
                     </div>
                 </div>
