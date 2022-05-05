@@ -32,7 +32,14 @@ public class OrderController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        logger.info("Received GET request");
 
+        resp.setContentType("text/html");
+        resp.setCharacterEncoding("UTF-8");
+
+        TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
+        WebContext context = new WebContext(req, resp, req.getServletContext());
+        engine.process("order.html", context, resp.getWriter());
     }
 
     @Override
@@ -46,6 +53,6 @@ public class OrderController extends HttpServlet {
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
-        engine.process("footer.html", context, resp.getWriter());
+        engine.process("order.html", context, resp.getWriter());
     }
 }
