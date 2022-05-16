@@ -1,0 +1,2138 @@
+{
+  "timestamp" : "2022-05-05 10:08:56.424",
+  "level" : "INFO",
+  "thread" : "qtp856432481-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Hello World",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 15:51:53.393",
+  "level" : "INFO",
+  "thread" : "qtp1002406942-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 15:51:54.480",
+  "level" : "INFO",
+  "thread" : "qtp1002406942-27",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 15:56:35.228",
+  "level" : "INFO",
+  "thread" : "qtp269685385-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 15:56:36.287",
+  "level" : "INFO",
+  "thread" : "qtp269685385-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:02:46.569",
+  "level" : "INFO",
+  "thread" : "qtp511357840-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:02:47.603",
+  "level" : "INFO",
+  "thread" : "qtp511357840-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:07:38.048",
+  "level" : "INFO",
+  "thread" : "qtp511357840-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:07:42.432",
+  "level" : "INFO",
+  "thread" : "qtp511357840-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:07:43.467",
+  "level" : "INFO",
+  "thread" : "qtp511357840-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:07:44.830",
+  "level" : "INFO",
+  "thread" : "qtp511357840-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:07:45.813",
+  "level" : "INFO",
+  "thread" : "qtp511357840-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:07:46.605",
+  "level" : "INFO",
+  "thread" : "qtp511357840-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:07:58.172",
+  "level" : "INFO",
+  "thread" : "qtp511357840-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:08:02.498",
+  "level" : "INFO",
+  "thread" : "qtp511357840-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:08:06.222",
+  "level" : "INFO",
+  "thread" : "qtp511357840-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:08:36.318",
+  "level" : "INFO",
+  "thread" : "qtp511357840-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:13:57.840",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:14:06.676",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:14:07.398",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:20:54.899",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:20:55.386",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-27",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:21:37.750",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:21:38.500",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:21:45.909",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:21:48.371",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:22:30.153",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:22:30.755",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:22:55.759",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:22:56.636",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:24:01.436",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:24:02.675",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:24:14.057",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:24:14.726",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:25:18.247",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:25:18.907",
+  "level" : "ERROR",
+  "thread" : "qtp1415624532-23",
+  "logger" : "org.thymeleaf.TemplateEngine",
+  "message" : "[THYMELEAF][qtp1415624532-23] Exception processing template \"product/index.html\": An error happened during template parsing (template: \"/templates/ShoppingCartModal.html\" - line 23, col 17)",
+  "context" : "default",
+  "exception" : "org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: \"/templates/ShoppingCartModal.html\" - line 23, col 17)\n\tat org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)\n\tat org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)\n\tat org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:302)\n\tat org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)\n\tat org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)\n\tat org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)\n\tat org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)\n\tat org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)\n\tat org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)\n\tat org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)\n\tat org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)\n\tat org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)\n\tat org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661)\n\tat org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)\n\tat org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1067)\n\tat com.codecool.shop.controller.ProductController.doGet(ProductController.java:62)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:687)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder$NotAsyncServlet.service(ServletHolder.java:1402)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)\n\tat org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1631)\n\tat org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:226)\n\tat org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:549)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)\n\tat org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:602)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)\n\tat org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1369)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:489)\n\tat org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1284)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)\n\tat org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191)\n\tat org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:501)\n\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:272)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)\n\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)\n\tat java.base/java.lang.Thread.run(Thread.java:833)\nCaused by: org.attoparser.ParseException: (Line = 23, Column = 17) Incomplete structure: \"<button type=\"button\" id=paymentButton\" class=\"btn btn-primary\">Continue to Payment</button>\n            </div>\n        </div>\n    </div>\n</div>\n</body>\n</html>\"\n\tat org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)\n\tat org.attoparser.MarkupParser.parse(MarkupParser.java:257)\n\tat org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)\n\t... 54 common frames omitted\n"
+}{
+  "timestamp" : "2022-05-05 16:25:19.190",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:25:19.225",
+  "level" : "ERROR",
+  "thread" : "qtp1415624532-20",
+  "logger" : "org.thymeleaf.TemplateEngine",
+  "message" : "[THYMELEAF][qtp1415624532-20] Exception processing template \"product/index.html\": An error happened during template parsing (template: \"/templates/ShoppingCartModal.html\" - line 23, col 17)",
+  "context" : "default",
+  "exception" : "org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: \"/templates/ShoppingCartModal.html\" - line 23, col 17)\n\tat org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)\n\tat org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)\n\tat org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:302)\n\tat org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)\n\tat org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)\n\tat org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)\n\tat org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)\n\tat org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)\n\tat org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)\n\tat org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)\n\tat org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)\n\tat org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)\n\tat org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)\n\tat org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)\n\tat org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1067)\n\tat com.codecool.shop.controller.ProductController.doGet(ProductController.java:62)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:687)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder$NotAsyncServlet.service(ServletHolder.java:1402)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)\n\tat org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1631)\n\tat org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:226)\n\tat org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:549)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)\n\tat org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:602)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)\n\tat org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1369)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:489)\n\tat org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1284)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)\n\tat org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191)\n\tat org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:501)\n\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:272)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)\n\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)\n\tat java.base/java.lang.Thread.run(Thread.java:833)\nCaused by: org.attoparser.ParseException: (Line = 23, Column = 17) Incomplete structure: \"<button type=\"button\" id=paymentButton\" class=\"btn btn-primary\">Continue to Payment</button>\n            </div>\n        </div>\n    </div>\n</div>\n</body>\n</html>\"\n\tat org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)\n\tat org.attoparser.MarkupParser.parse(MarkupParser.java:257)\n\tat org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)\n\t... 54 common frames omitted\n"
+}{
+  "timestamp" : "2022-05-05 16:26:58.410",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:26:59.673",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:29:45.969",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-27",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:29:47.092",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:31:45.935",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:31:47.735",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:37:34.028",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:37:35.112",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:38:19.731",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:38:20.856",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:39:07.506",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:39:08.600",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-29",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:40:56.603",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:40:58.187",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:41:49.732",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:41:49.845",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:41:51.429",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:43:04.494",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:43:06.060",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:43:36.715",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:43:38.299",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:44:11.178",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:44:12.294",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:45:04.420",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:45:05.736",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-35",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:45:15.854",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-34",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:45:17.328",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-34",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:47:36.129",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:47:37.929",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:50:25.660",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-40",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:50:27.759",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-40",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:50:50.096",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:50:51.988",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-34",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:51:37.926",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-42",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:51:39.793",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-42",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:55:14.204",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-34",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:55:15.902",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:55:32.943",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-42",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:55:34.648",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-34",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:56:39.612",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:56:41.381",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-44",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:57:32.828",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 16:57:35.516",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-34",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:01:46.444",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:01:48.050",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:04:59.362",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:05:01.055",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-45",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:07:22.481",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-36",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:07:24.335",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-44",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:07:53.559",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:07:55.243",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:08:29.460",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-36",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:08:31.296",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:09:46.624",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-48",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:09:48.554",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-44",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:10:41.981",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:10:44.006",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-30",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:11:35.222",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-48",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:11:37.282",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:11:59.809",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-50",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:12:01.882",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-50",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:13:01.208",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-44",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:13:02.830",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-44",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:13:51.146",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-44",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:13:52.552",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-50",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:14:39.590",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-44",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:14:41.104",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-50",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:15:03.315",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:15:04.789",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:15:20.510",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:15:22.691",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-50",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:15:34.976",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:15:36.421",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:16:00.938",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-48",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:16:02.498",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-44",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:16:18.637",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-50",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:16:20.362",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-50",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:18:58.843",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-52",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:19:00.825",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-48",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:25:15.567",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-53",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:25:17.351",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-39",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:27:38.922",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-36",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:27:40.364",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-36",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:28:21.308",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-36",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:28:22.576",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-49",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:28:36.842",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-52",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:28:38.963",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-52",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:29:13.387",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-53",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:29:15.279",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-49",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:39:41.583",
+  "level" : "INFO",
+  "thread" : "qtp139416025-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:39:43.567",
+  "level" : "INFO",
+  "thread" : "qtp139416025-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:39:51.218",
+  "level" : "INFO",
+  "thread" : "qtp139416025-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:39:51.302",
+  "level" : "INFO",
+  "thread" : "qtp139416025-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:39:51.304",
+  "level" : "INFO",
+  "thread" : "qtp139416025-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{totalPrice=[26],targetUrl=[/payment],backToUrl=[/order]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:40:00.658",
+  "level" : "INFO",
+  "thread" : "qtp139416025-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:40:00.691",
+  "level" : "INFO",
+  "thread" : "qtp139416025-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:40:00.692",
+  "level" : "INFO",
+  "thread" : "qtp139416025-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{totalPrice=[0],targetUrl=[/payment],backToUrl=[/order]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:41:07.096",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:41:08.307",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:41:13.320",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:41:13.354",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:41:13.356",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{totalPrice=[26],targetUrl=[/payment],backToUrl=[/order]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:43:11.539",
+  "level" : "INFO",
+  "thread" : "qtp839907439-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:43:11.687",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:43:11.688",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{totalPrice=[0],targetUrl=[/payment],backToUrl=[/order]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:44:32.393",
+  "level" : "INFO",
+  "thread" : "qtp839907439-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:44:33.370",
+  "level" : "INFO",
+  "thread" : "qtp839907439-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:44:34.965",
+  "level" : "INFO",
+  "thread" : "qtp839907439-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:46:39.684",
+  "level" : "INFO",
+  "thread" : "qtp839907439-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:46:40.533",
+  "level" : "INFO",
+  "thread" : "qtp839907439-27",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:47:23.469",
+  "level" : "INFO",
+  "thread" : "qtp839907439-27",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:47:24.312",
+  "level" : "INFO",
+  "thread" : "qtp839907439-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:48:44.507",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:48:45.296",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:49:00.978",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:49:01.595",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:49:57.154",
+  "level" : "INFO",
+  "thread" : "qtp839907439-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:49:57.574",
+  "level" : "INFO",
+  "thread" : "qtp839907439-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:50:07.682",
+  "level" : "INFO",
+  "thread" : "qtp839907439-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:50:08.069",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:52:08.048",
+  "level" : "INFO",
+  "thread" : "qtp839907439-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:52:08.826",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:52:24.333",
+  "level" : "INFO",
+  "thread" : "qtp839907439-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:52:25.070",
+  "level" : "INFO",
+  "thread" : "qtp839907439-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:52:42.820",
+  "level" : "INFO",
+  "thread" : "qtp839907439-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:52:43.451",
+  "level" : "INFO",
+  "thread" : "qtp839907439-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:52:55.837",
+  "level" : "INFO",
+  "thread" : "qtp839907439-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:52:56.596",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:12.834",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:13.382",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:22.695",
+  "level" : "INFO",
+  "thread" : "qtp839907439-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:23.222",
+  "level" : "INFO",
+  "thread" : "qtp839907439-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:27.723",
+  "level" : "INFO",
+  "thread" : "qtp839907439-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:28.268",
+  "level" : "INFO",
+  "thread" : "qtp839907439-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:31.458",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:48.376",
+  "level" : "INFO",
+  "thread" : "qtp839907439-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:53:48.810",
+  "level" : "INFO",
+  "thread" : "qtp839907439-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:54:05.281",
+  "level" : "INFO",
+  "thread" : "qtp839907439-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:58:51.933",
+  "level" : "INFO",
+  "thread" : "qtp839907439-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:58:53.631",
+  "level" : "INFO",
+  "thread" : "qtp839907439-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 17:58:56.494",
+  "level" : "INFO",
+  "thread" : "qtp839907439-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:08:07.877",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:08:09.004",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:08:17.038",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:08:55.549",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:09:15.545",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-23",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:09:15.548",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-23",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{BillingPostal=[5650],ShippingPostal=[5650],BillingCity=[asddsfd],cardName=[asdasdasda],cardYear=[22],ShippingStreet=[asdasdasdas],cardCVV=[421],BillingStreet=[asdasdasdasd],phone=[30/4687435],cardMonth=[08],name=[asdasdasdasd],ShippingCity=[asdasdasd],email=[asd@asd.com],cardNumber=[1111 1111 1111 1111]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:09:43.019",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:09:44.059",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:09:46.806",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:58:31.855",
+  "level" : "INFO",
+  "thread" : "qtp1507604180-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 18:58:35.983",
+  "level" : "INFO",
+  "thread" : "qtp1507604180-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 19:00:20.516",
+  "level" : "INFO",
+  "thread" : "qtp1507604180-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 19:00:20.518",
+  "level" : "INFO",
+  "thread" : "qtp1507604180-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{BillingPostal=[1111],ShippingPostal=[1111],BillingCity=[Berlin],cardName=[Kek W],cardYear=[23],ShippingStreet=[Goblin Straße 12.],cardCVV=[222],BillingStreet=[Goblin Straße 12.],phone=[70/1234567],cardMonth=[08],name=[Kek W],ShippingCity=[Berlin],email=[asd@asd.com],cardNumber=[1648 1475 1456 6742]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:26:57.297",
+  "level" : "INFO",
+  "thread" : "qtp424384387-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:26:58.760",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:27:08.306",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:27:16.032",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:27:17.300",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:27:18.036",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:30:49.556",
+  "level" : "INFO",
+  "thread" : "qtp424384387-23",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:34:14.940",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:34:14.945",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{BillingPostal=[1111],ShippingPostal=[1111],BillingCity=[Berlin],cardName=[Kek W],orderId=[1],cardYear=[23],ShippingStreet=[Goblin Straße 12.],cardCVV=[123],BillingStreet=[Goblin Straße 12.],phone=[70/1234567],cardMonth=[08],name=[Kek W],ShippingCity=[Berlin],email=[asd@asd.com],cardNumber=[1111 1111 1111 1111]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:34:14.949",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "101.89 EUR",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:34:48.172",
+  "level" : "INFO",
+  "thread" : "qtp424384387-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:37:04.705",
+  "level" : "INFO",
+  "thread" : "qtp424384387-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:37:05.183",
+  "level" : "INFO",
+  "thread" : "qtp424384387-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:37:07.719",
+  "level" : "INFO",
+  "thread" : "qtp424384387-28",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:38:06.222",
+  "level" : "INFO",
+  "thread" : "qtp424384387-28",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:38:06.224",
+  "level" : "INFO",
+  "thread" : "qtp424384387-28",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{BillingPostal=[1111],ShippingPostal=[1111],BillingCity=[Berlin],cardName=[Kek W],orderId=[2],cardYear=[23],ShippingStreet=[Goblin Straße 12.],cardCVV=[111],BillingStreet=[Goblin Straße 12.],phone=[70/1234567],cardMonth=[08],name=[arsedfgh],ShippingCity=[Berlin],email=[asd@asd.com],cardNumber=[1111 1111 1111 1111]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:38:06.224",
+  "level" : "INFO",
+  "thread" : "qtp424384387-28",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "101.89 EUR",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:38:12.302",
+  "level" : "INFO",
+  "thread" : "qtp424384387-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-05 21:41:24.354",
+  "level" : "INFO",
+  "thread" : "qtp424384387-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 08:57:36.441",
+  "level" : "INFO",
+  "thread" : "qtp318555935-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 08:57:38.334",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:19:16.881",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:19:17.782",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-18",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:32.418",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:33.383",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:36.430",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:38.461",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:41.232",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:42.970",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:43.706",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:44.449",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:44.934",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:46.173",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:49.158",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:50.100",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:51.031",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:51.738",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:52.450",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:24:53.360",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:01.451",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:01.925",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:02.551",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:03.020",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:03.821",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:04.274",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:04.824",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:05.402",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:10.987",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:11.537",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:12.175",
+  "level" : "INFO",
+  "thread" : "qtp318555935-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:13.009",
+  "level" : "INFO",
+  "thread" : "qtp318555935-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:14.346",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:14.928",
+  "level" : "INFO",
+  "thread" : "qtp318555935-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:15.532",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:17.304",
+  "level" : "INFO",
+  "thread" : "qtp318555935-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:20.899",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:21.498",
+  "level" : "INFO",
+  "thread" : "qtp318555935-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:21.967",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:22.631",
+  "level" : "INFO",
+  "thread" : "qtp318555935-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:23.282",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:23.831",
+  "level" : "INFO",
+  "thread" : "qtp318555935-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:25.265",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:25:25.902",
+  "level" : "INFO",
+  "thread" : "qtp318555935-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:26:29.912",
+  "level" : "INFO",
+  "thread" : "qtp318555935-19",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:29:02.739",
+  "level" : "INFO",
+  "thread" : "qtp1002406942-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:29:47.550",
+  "level" : "INFO",
+  "thread" : "qtp1415624532-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:30:29.793",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:31:25.626",
+  "level" : "INFO",
+  "thread" : "qtp1054913783-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:32:07.586",
+  "level" : "INFO",
+  "thread" : "qtp2004305265-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:32:30.073",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:35:44.438",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:53:24.018",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:53:27.386",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:53:29.462",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:53:36.074",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:53:45.683",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:53:48.953",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:53:55.436",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:53:56.959",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-22",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:54:02.389",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:55:02.074",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-21",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:56:38.850",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-23",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:56:38.869",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-23",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{BillingPostal=[1111],ShippingPostal=[1111],BillingCity=[Berlin],cardName=[Kek W],orderId=[1],cardYear=[23],ShippingStreet=[Goblin Straße 12.],cardCVV=[111],BillingStreet=[Goblin Straße 12.],phone=[70/1234567],cardMonth=[01],name=[Kek W],ShippingCity=[Berlin],email=[asd@asd.com],cardNumber=[4987 5122 3112 2102]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:56:38.873",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-23",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "86.89 EUR",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:56:56.164",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 09:57:33.736",
+  "level" : "INFO",
+  "thread" : "qtp1260390769-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:00:11.749",
+  "level" : "INFO",
+  "thread" : "qtp32777062-24",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:00:18.671",
+  "level" : "INFO",
+  "thread" : "qtp32777062-25",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:00:37.773",
+  "level" : "INFO",
+  "thread" : "qtp32777062-21",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:01:31.323",
+  "level" : "INFO",
+  "thread" : "qtp32777062-25",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:02:10.423",
+  "level" : "INFO",
+  "thread" : "qtp32777062-25",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:03:33.299",
+  "level" : "INFO",
+  "thread" : "qtp32777062-21",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:05:41.385",
+  "level" : "INFO",
+  "thread" : "qtp32777062-23",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:05:41.388",
+  "level" : "INFO",
+  "thread" : "qtp32777062-23",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{BillingPostal=[1111],ShippingPostal=[1111],BillingCity=[Berlin],cardName=[Kek W],orderId=[5],cardYear=[22],ShippingStreet=[Goblin Straße 12.],cardCVV=[222],BillingStreet=[Goblin Straße 12.],phone=[70/1234567],cardMonth=[08],name=[Kek W],ShippingCity=[Berlin],email=[asd@asd.com],cardNumber=[1111 1111 1111 1111]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:05:41.391",
+  "level" : "INFO",
+  "thread" : "qtp32777062-23",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "89.89 EUR",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:05:47.183",
+  "level" : "INFO",
+  "thread" : "qtp32777062-23",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:17:37.116",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-06 12:17:38.176",
+  "level" : "INFO",
+  "thread" : "qtp1450830187-21",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:52:02.111",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:20.520",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:26.346",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-27",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:28.080",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:32.276",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:32.866",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-27",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:33.415",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:34.551",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-20",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:36.148",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-19",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:53:49.995",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-27",
+  "logger" : "com.codecool.shop.controller.PaymentAPIController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:56:17.898",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-29",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "Received POST request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:56:17.901",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-29",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "{BillingPostal=[5000],ShippingPostal=[5000],BillingCity=[Aba],cardName=[Szittya Péter],orderId=[1],cardYear=[23],ShippingStreet=[Kossuth utca 555.],cardCVV=[547],BillingStreet=[Kossuth utca 555.],phone=[50/4715826],cardMonth=[08],name=[Szittya Péter],ShippingCity=[Aba],email=[rendszergazda@gmail.com],cardNumber=[5478 9451 2314 4589]}",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:56:17.905",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-29",
+  "logger" : "com.codecool.shop.controller.OrderController",
+  "message" : "41.9 EUR",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:56:31.999",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-29",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-07 22:56:58.053",
+  "level" : "INFO",
+  "thread" : "qtp1644987969-25",
+  "logger" : "com.codecool.shop.controller.ProductController",
+  "message" : "Received GET request",
+  "context" : "default"
+}

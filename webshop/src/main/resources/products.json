@@ -28,7 +28,7 @@
       "defaultCurrency": "EUR",
       "description": "How fast? Sanic fast. Be faster than light with Sanic the hedgehog",
       "categoryId": 2,
-      "supplierId": 3
+      "supplierId": 4
     },{
       "name": "Supra Mayro",
       "defaultPrice": 59.99,

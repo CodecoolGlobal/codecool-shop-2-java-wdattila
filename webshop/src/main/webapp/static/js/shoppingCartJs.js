@@ -28,19 +28,18 @@ function enablePaymentButton(){
 }
 
 function addProduct(e){
-    addProductToSession(e)
+    addProductToLocalStorage(e)
     loadCart()
     enablePaymentButton()
 }
 
-async function addProductToSession(click){
+function addProductToLocalStorage(click){
     let productId = click.target.getAttribute("productid")
     if(localStorage.getItem(productId)){
         localStorage.setItem(productId, String(parseInt(localStorage.getItem(productId))+1))
     }else{
         localStorage.setItem(productId,"1")
     }
-    loadCart()
 }
 
 function getProductsForCart(){
@@ -137,5 +136,7 @@ function postToPayment(data){
 initAddToCart()
 if(isEmptyCart()){
     loadCart()
+}else{
+    manageEmptyCart()
 }
 document.querySelector("#payment").addEventListener("click", handlePaymentClick);
