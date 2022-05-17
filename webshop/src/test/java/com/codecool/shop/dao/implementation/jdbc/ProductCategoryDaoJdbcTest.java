@@ -1,5 +1,7 @@
 package com.codecool.shop.dao.implementation.jdbc;
 
+import com.codecool.shop.dao.ProductCategoryDao;
+import com.codecool.shop.model.ProductCategory;
 import org.hsqldb.jdbc.JDBCCommonDataSource;
 import org.hsqldb.jdbc.JDBCDataSource;
 import org.junit.jupiter.api.AfterAll;
@@ -13,9 +15,10 @@ import java.sql.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductCategoryDaoJdbcTest {
+    private static ProductCategoryDao productCategoryDao;
     private static void initDatabase() throws SQLException {
         DataSource dataSource = JdbcTestUtil.getSource();
-        try (Connection connection = dataSource.getConnection(); Statement statement = connection.createStatement();) {
+        try (Connection connection = dataSource.getConnection(); Statement statement = connection.createStatement()) {
             statement.execute("CREATE TABLE Categories(" +
                     "    id SERIAL NOT NULL PRIMARY KEY," +
                     "    name varchar NOT NULL," +
@@ -38,6 +41,7 @@ class ProductCategoryDaoJdbcTest {
 
         // initialize database
         initDatabase();
+        productCategoryDao = new ProductCategoryDaoJdbc(JdbcTestUtil.getSource());
     }
 
     @AfterAll
@@ -53,6 +57,9 @@ class ProductCategoryDaoJdbcTest {
 
     @Test
     void getCategoryByIndex() {
+        ProductCategory productCategory = productCategoryDao.find(1);
+        assertEquals(productCategory.getDepartment(), "Video Game");
+        assertEquals(productCategory.getName(), "RPG");
     }
 
     @Test
