@@ -4,6 +4,7 @@ import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.model.ProductCategory;
 
 import javax.sql.DataSource;
+import java.sql.*;
 import java.util.List;
 
 public class ProductCategoryDaoJdbc implements ProductCategoryDao {
@@ -20,7 +21,25 @@ public class ProductCategoryDaoJdbc implements ProductCategoryDao {
 
     @Override
     public ProductCategory find(int id) {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT name, department, description FROM Categories " +
+                    "WHERE id = ?";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            if(rs.next()){
+                String name = rs.getString("name");
+                String department = rs.getString("department");
+                String description = rs.getString("description");
+                ProductCategory productCategory = new ProductCategory(name, department, description);
+                productCategory.setId(id);
+                return productCategory;
+            }else{
+                return null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
