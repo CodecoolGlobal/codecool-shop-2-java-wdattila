@@ -23,15 +23,6 @@ public class Initializer implements ServletContextListener {
         ProductDao productDataStore = ProductDaoMem.getInstance();
         ProductCategoryDao productCategoryDataStore = ProductCategoryDaoMem.getInstance();
         SupplierDao supplierDataStore = SupplierDaoMem.getInstance();
-
-        //setting up a new supplier
-        supplierDataStore.readFromFile();
-
-        //setting up a new product category
-        productCategoryDataStore.readFromFile();
-
-        //setting up products and printing it
-        productDataStore.readFromFile(productCategoryDataStore, supplierDataStore);
     }
 
     @Override
