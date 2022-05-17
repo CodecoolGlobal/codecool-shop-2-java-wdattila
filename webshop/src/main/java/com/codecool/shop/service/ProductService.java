@@ -87,4 +87,8 @@ public class ProductService{
     public List<Product> getProductsByIds(String productIds){
         return productIds != null ? productDao.getMultipleById(productIds) : null;
     }
+
+    public Product getProductById(int productId){
+        return productDao.find(productId);
+    }
 }
