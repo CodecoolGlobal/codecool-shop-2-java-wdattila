@@ -63,6 +63,12 @@ class ProductCategoryDaoJdbcTest {
     }
 
     @Test
+    void getNonExistentCategoryByIndex() {
+        ProductCategory productCategory = productCategoryDao.find(4);
+        assertNull(productCategory);
+    }
+
+    @Test
     void add() {
     }
 
