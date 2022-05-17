@@ -4,17 +4,20 @@ import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.ShoppingCartDao;
 import com.codecool.shop.dao.SupplierDao;
-import com.codecool.shop.dao.implementation.*;
+import com.codecool.shop.dao.implementation.jdbc.ProductCategoryDaoJdbc;
+import com.codecool.shop.dao.implementation.jdbc.ProductDaoJdbc;
+import com.codecool.shop.dao.implementation.jdbc.ShoppingCartDaoJdbc;
+import com.codecool.shop.dao.implementation.jdbc.SupplierDaoJdbc;
+import com.codecool.shop.dao.implementation.mem.ProductCategoryDaoMem;
+import com.codecool.shop.dao.implementation.mem.ProductDaoMem;
+import com.codecool.shop.dao.implementation.mem.ShoppingCartDaoMem;
+import com.codecool.shop.dao.implementation.mem.SupplierDaoMem;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.Properties;
 
 public class DatabaseManager {
