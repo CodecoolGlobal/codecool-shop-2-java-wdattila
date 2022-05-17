@@ -1,5 +1,9 @@
-package com.codecool.shop.dao;
+package com.codecool.shop.service;
 
+import com.codecool.shop.dao.ProductCategoryDao;
+import com.codecool.shop.dao.ProductDao;
+import com.codecool.shop.dao.ShoppingCartDao;
+import com.codecool.shop.dao.SupplierDao;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import javax.sql.DataSource;
@@ -13,6 +17,10 @@ import java.util.Map;
 import java.util.Properties;
 
 public class DatabaseManager {
+    private ProductDao productDao;
+    private ProductCategoryDao productCategoryDao;
+    private SupplierDao supplierDao;
+    private ShoppingCartDao shoppingCartDao;
 
     public DatabaseManager() {
         try {
