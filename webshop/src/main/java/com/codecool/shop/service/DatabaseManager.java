@@ -70,11 +70,8 @@ public class DatabaseManager {
     }
 
     private Properties getConnectionConfig() throws IOException {
-        String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-        String connConfigPath = rootPath + "connection.properties";
-
         Properties connProps = new Properties();
-        connProps.load(new FileInputStream(connConfigPath));
+        connProps.load(getClass().getClassLoader().getResourceAsStream("connection.properties"));
         return connProps;
     }
 
