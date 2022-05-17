@@ -30,6 +30,7 @@ public class ProductCategoryDaoMem implements ProductCategoryDao {
     public static ProductCategoryDaoMem getInstance() {
         if (instance == null) {
             instance = new ProductCategoryDaoMem();
+            instance.readFromFile();
         }
         return instance;
     }
@@ -55,8 +56,7 @@ public class ProductCategoryDaoMem implements ProductCategoryDao {
         return data;
     }
 
-    @Override
-    public void readFromFile() {
+    private void readFromFile() {
         try (Reader reader = new InputStreamReader(
                 SupplierDaoMem.class.getResourceAsStream("/categories.json"))) {
             Gson gson = new Gson();
