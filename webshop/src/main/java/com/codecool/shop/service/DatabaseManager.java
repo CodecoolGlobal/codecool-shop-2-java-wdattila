@@ -36,6 +36,7 @@ public class DatabaseManager {
     public void setup() throws SQLException, IOException {
         Properties connProps = getConnectionConfig();
         if ("jdbc".equals(connProps.getProperty("dao"))) {
+            DataSource dataSource = connect(connProps);
             this.productDao = new ProductDaoJdbc();
             this.productCategoryDao = new ProductCategoryDaoJdbc();
             this.supplierDao = new SupplierDaoJdbc();
@@ -46,14 +47,13 @@ public class DatabaseManager {
             this.supplierDao = SupplierDaoMem.getInstance();
             this.shoppingCartDao = ShoppingCartDaoMem.getInstance();
         }
-        DataSource dataSource = connect();
     }
 
-    private DataSource connect() throws SQLException {
+    private DataSource connect(Properties connProps) throws SQLException {
         PGSimpleDataSource dataSource = new PGSimpleDataSource();
-        String dbName = System.getenv("dbName");
-        String user = System.getenv("user");
-        String password = System.getenv("password");
+        String dbName = System.getenv(connProps.getProperty("database"));
+        String user = System.getenv(connProps.getProperty("user"));
+        String password = System.getenv(connProps.getProperty("password"));
 
         dataSource.setDatabaseName(dbName);
         dataSource.setUser(user);
