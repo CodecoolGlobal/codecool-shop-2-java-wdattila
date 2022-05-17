@@ -19,11 +19,6 @@ public class ShoppingCartService {
         this.productDao = productDao;
     }
 
-    public ShoppingCartService() {
-        shoppingCartDao = ShoppingCartDaoMem.getInstance();
-        productDao = ProductDaoMem.getInstance();
-    }
-
     public void addShoppingCart(ShoppingCart shoppingCart) {
         shoppingCartDao.add(shoppingCart);
     }
