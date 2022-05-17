@@ -81,4 +81,8 @@ public class DatabaseManager {
     public ProductService getProductService(){
         return new ProductService(productDao, productCategoryDao, supplierDao);
     }
+
+    public ShoppingCartService getShoppingCartService(){
+        return new ShoppingCartService(shoppingCartDao, productDao);
+    }
 }

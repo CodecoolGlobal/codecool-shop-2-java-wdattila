@@ -14,6 +14,11 @@ public class ShoppingCartService {
     private ShoppingCartDao shoppingCartDao;
     private ProductDao productDao;
 
+    public ShoppingCartService(ShoppingCartDao shoppingCartDao, ProductDao productDao) {
+        this.shoppingCartDao = shoppingCartDao;
+        this.productDao = productDao;
+    }
+
     public ShoppingCartService() {
         shoppingCartDao = ShoppingCartDaoMem.getInstance();
         productDao = ProductDaoMem.getInstance();
