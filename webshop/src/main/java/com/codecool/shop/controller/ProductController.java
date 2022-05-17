@@ -1,6 +1,7 @@
 package com.codecool.shop.controller;
 
 import com.codecool.shop.model.Product;
+import com.codecool.shop.service.DatabaseManager;
 import com.codecool.shop.service.ProductService;
 import com.codecool.shop.config.TemplateEngineUtil;
 import org.slf4j.Logger;
@@ -21,11 +22,12 @@ import java.util.stream.Collectors;
 public class ProductController extends HttpServlet {
     private static final Logger logger
             = (Logger) LoggerFactory.getLogger(ProductController.class);
+    private final DatabaseManager dbManager = new DatabaseManager();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Received GET request");
-        ProductService productService = new ProductService();
+        ProductService productService = dbManager.getProductService();
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
