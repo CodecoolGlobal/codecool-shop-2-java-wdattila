@@ -1,6 +1,7 @@
 package com.codecool.shop.controller;
 
 import com.codecool.shop.model.ShoppingCart;
+import com.codecool.shop.service.DatabaseManager;
 import com.codecool.shop.service.ShoppingCartService;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -22,7 +23,8 @@ import java.util.Map;
 public class PaymentAPIController extends HttpServlet {
     private static final Logger logger
             = (Logger) LoggerFactory.getLogger(PaymentAPIController.class);
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
+    private final DatabaseManager dbManager = new DatabaseManager();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,7 +32,6 @@ public class PaymentAPIController extends HttpServlet {
 
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
-        Gson gson = new Gson();
 
         StringBuilder builder = new StringBuilder();
         BufferedReader reader = req.getReader();
@@ -40,7 +41,7 @@ public class PaymentAPIController extends HttpServlet {
         }
         JsonObject products = gson.fromJson(builder.toString(), JsonObject.class);
 
-        ShoppingCartService cartService = new ShoppingCartService();
+        ShoppingCartService cartService = dbManager.getShoppingCartService();
 
         ShoppingCart cart = new ShoppingCart("cart");
         cartService.addShoppingCart(cart);
