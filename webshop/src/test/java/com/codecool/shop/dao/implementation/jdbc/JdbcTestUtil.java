@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class JdbcTestUtil {
     static DataSource getSource() throws SQLException {
         JDBCDataSource dataSource = new JDBCDataSource();
-        dataSource.setUrl("jdbc:hsqldb:mem:productCategories");
+        dataSource.setUrl("jdbc:hsqldb:mem:productCategories;sql.enforce_size=false;sql.syntax_pgs=true");
         dataSource.setUser("sa");
         dataSource.setPassword("sa");
         return dataSource;
