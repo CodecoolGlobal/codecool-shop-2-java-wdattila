@@ -27,6 +27,7 @@ public class SupplierDaoMem implements SupplierDao {
     public static SupplierDaoMem getInstance() {
         if (instance == null) {
             instance = new SupplierDaoMem();
+            instance.readFromFile();
         }
         return instance;
     }
@@ -52,8 +53,7 @@ public class SupplierDaoMem implements SupplierDao {
         return data;
     }
 
-    @Override
-    public void readFromFile() {
+    private void readFromFile() {
         try (Reader reader = new InputStreamReader(
                 SupplierDaoMem.class.getResourceAsStream("/suppliers.json"))) {
             Gson gson = new Gson();
