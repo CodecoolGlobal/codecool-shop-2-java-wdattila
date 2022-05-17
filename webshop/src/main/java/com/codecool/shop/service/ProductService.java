@@ -17,6 +17,12 @@ public class ProductService{
     private ProductCategoryDao productCategoryDao;
     private SupplierDao supplierDao;
 
+    public ProductService(ProductDao productDao, ProductCategoryDao productCategoryDao, SupplierDao supplierDao) {
+        this.productDao = productDao;
+        this.productCategoryDao = productCategoryDao;
+        this.supplierDao = supplierDao;
+    }
+
     public ProductService() {
         this.productDao = ProductDaoMem.getInstance();
         this.productCategoryDao = ProductCategoryDaoMem.getInstance();

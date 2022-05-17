@@ -77,4 +77,8 @@ public class DatabaseManager {
         connProps.load(new FileInputStream(connConfigPath));
         return connProps;
     }
+
+    public ProductService getProductService(){
+        return new ProductService(productDao, productCategoryDao, supplierDao);
+    }
 }
