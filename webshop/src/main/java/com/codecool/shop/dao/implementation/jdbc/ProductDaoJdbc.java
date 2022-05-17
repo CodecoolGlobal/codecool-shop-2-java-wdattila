@@ -5,9 +5,16 @@ import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ProductCategory;
 import com.codecool.shop.model.Supplier;
 
+import javax.sql.DataSource;
 import java.util.List;
 
 public class ProductDaoJdbc implements ProductDao {
+    private DataSource dataSource;
+
+    public ProductDaoJdbc(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
     @Override
     public void add(Product product) {
 

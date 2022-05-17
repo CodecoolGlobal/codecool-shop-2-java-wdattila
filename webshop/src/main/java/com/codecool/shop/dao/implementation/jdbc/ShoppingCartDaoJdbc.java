@@ -3,9 +3,16 @@ package com.codecool.shop.dao.implementation.jdbc;
 import com.codecool.shop.dao.ShoppingCartDao;
 import com.codecool.shop.model.ShoppingCart;
 
+import javax.sql.DataSource;
 import java.util.List;
 
 public class ShoppingCartDaoJdbc implements ShoppingCartDao {
+    private DataSource dataSource;
+
+    public ShoppingCartDaoJdbc(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
     @Override
     public void add(ShoppingCart shoppingCart) {
 
