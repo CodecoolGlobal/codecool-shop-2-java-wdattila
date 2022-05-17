@@ -3,10 +3,14 @@ package com.codecool.shop.dao;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import javax.sql.DataSource;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 public class DatabaseManager {
 
@@ -37,5 +41,14 @@ public class DatabaseManager {
         System.out.println("Connection ok.");
 
         return dataSource;
+    }
+
+    private Properties getConnectionConfig() throws IOException {
+        String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+        String connConfigPath = rootPath + "connection.properties";
+
+        Properties connProps = new Properties();
+        connProps.load(new FileInputStream(connConfigPath));
+        return connProps;
     }
 }
