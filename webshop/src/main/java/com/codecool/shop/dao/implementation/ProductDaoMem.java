@@ -32,6 +32,7 @@ public class ProductDaoMem implements ProductDao {
     public static ProductDaoMem getInstance() {
         if (instance == null) {
             instance = new ProductDaoMem();
+            instance.readFromFile(ProductCategoryDaoMem.getInstance(), SupplierDaoMem.getInstance());
         }
         return instance;
     }
@@ -67,8 +68,7 @@ public class ProductDaoMem implements ProductDao {
         return data.stream().filter(t -> t.getProductCategory().equals(productCategory)).collect(Collectors.toList());
     }
 
-    @Override
-    public void readFromFile(ProductCategoryDao productCategoryDataStore, SupplierDao supplierDataStore) {
+    private void readFromFile(ProductCategoryDao productCategoryDataStore, SupplierDao supplierDataStore) {
         try (Reader reader = new InputStreamReader(
                 SupplierDaoMem.class.getResourceAsStream("/products.json"))) {
             Gson gson = new Gson();
