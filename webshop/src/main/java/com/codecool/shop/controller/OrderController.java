@@ -3,6 +3,7 @@ package com.codecool.shop.controller;
 import com.codecool.shop.config.TemplateEngineUtil;
 import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ShoppingCart;
+import com.codecool.shop.service.DatabaseManager;
 import com.codecool.shop.service.ProductService;
 import com.codecool.shop.service.ShoppingCartService;
 import com.google.gson.Gson;
@@ -29,6 +30,7 @@ import java.util.stream.Collectors;
 public class OrderController extends HttpServlet {
     private static final Logger logger
             = (Logger) LoggerFactory.getLogger(OrderController.class);
+    private final DatabaseManager dbManager = new DatabaseManager();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -41,7 +43,7 @@ public class OrderController extends HttpServlet {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
 
-        ShoppingCartService shoppingCartService = new ShoppingCartService();
+        ShoppingCartService shoppingCartService = dbManager.getShoppingCartService();
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
@@ -60,7 +62,7 @@ public class OrderController extends HttpServlet {
             orderId = Integer.parseInt(req.getParameter("orderId"));
         }
 
-        ShoppingCartService shoppingCartService = new ShoppingCartService();
+        ShoppingCartService shoppingCartService = dbManager.getShoppingCartService();
 
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");

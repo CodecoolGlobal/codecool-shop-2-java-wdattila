@@ -1,11 +1,9 @@
-package com.codecool.shop.dao.implementation;
+package com.codecool.shop.dao.implementation.mem;
 
 import com.codecool.shop.dao.SupplierDao;
-import com.codecool.shop.model.ProductCategory;
 import com.codecool.shop.model.Supplier;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.io.*;
@@ -27,6 +25,7 @@ public class SupplierDaoMem implements SupplierDao {
     public static SupplierDaoMem getInstance() {
         if (instance == null) {
             instance = new SupplierDaoMem();
+            instance.readFromFile();
         }
         return instance;
     }
@@ -52,8 +51,7 @@ public class SupplierDaoMem implements SupplierDao {
         return data;
     }
 
-    @Override
-    public void readFromFile() {
+    private void readFromFile() {
         try (Reader reader = new InputStreamReader(
                 SupplierDaoMem.class.getResourceAsStream("/suppliers.json"))) {
             Gson gson = new Gson();

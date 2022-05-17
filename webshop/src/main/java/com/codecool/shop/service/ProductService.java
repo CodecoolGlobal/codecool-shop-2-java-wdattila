@@ -3,9 +3,9 @@ package com.codecool.shop.service;
 import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.SupplierDao;
-import com.codecool.shop.dao.implementation.ProductCategoryDaoMem;
-import com.codecool.shop.dao.implementation.ProductDaoMem;
-import com.codecool.shop.dao.implementation.SupplierDaoMem;
+import com.codecool.shop.dao.implementation.mem.ProductCategoryDaoMem;
+import com.codecool.shop.dao.implementation.mem.ProductDaoMem;
+import com.codecool.shop.dao.implementation.mem.SupplierDaoMem;
 import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ProductCategory;
 import com.codecool.shop.model.Supplier;
@@ -17,10 +17,10 @@ public class ProductService{
     private ProductCategoryDao productCategoryDao;
     private SupplierDao supplierDao;
 
-    public ProductService() {
-        this.productDao = ProductDaoMem.getInstance();
-        this.productCategoryDao = ProductCategoryDaoMem.getInstance();
-        this.supplierDao = SupplierDaoMem.getInstance();
+    public ProductService(ProductDao productDao, ProductCategoryDao productCategoryDao, SupplierDao supplierDao) {
+        this.productDao = productDao;
+        this.productCategoryDao = productCategoryDao;
+        this.supplierDao = supplierDao;
     }
 
     public ProductCategory getProductCategory(int categoryId){
@@ -80,5 +80,9 @@ public class ProductService{
 
     public List<Product> getProductsByIds(String productIds){
         return productIds != null ? productDao.getMultipleById(productIds) : null;
+    }
+
+    public Product getProductById(int productId){
+        return productDao.find(productId);
     }
 }

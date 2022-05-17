@@ -78,6 +78,13 @@
             <version>2.9.0</version>
         </dependency>
 
+        <!-- PostgreSql database connection library -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.5</version>
+        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>

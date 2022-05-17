@@ -9,7 +9,6 @@ public interface ProductCategoryDao {
     void add(ProductCategory category);
     ProductCategory find(int id);
     void remove(int id);
-    void readFromFile();
 
     List<ProductCategory> getAll();
     List<ProductCategory> getMultipleById(String ids);

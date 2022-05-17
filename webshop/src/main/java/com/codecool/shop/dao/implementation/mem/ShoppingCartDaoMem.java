@@ -1,7 +1,6 @@
-package com.codecool.shop.dao.implementation;
+package com.codecool.shop.dao.implementation.mem;
 
 import com.codecool.shop.dao.ShoppingCartDao;
-import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ShoppingCart;
 
 import java.util.ArrayList;
