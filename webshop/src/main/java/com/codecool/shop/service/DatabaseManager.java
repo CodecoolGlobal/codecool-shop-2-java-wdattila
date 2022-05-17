@@ -4,6 +4,7 @@ import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.ShoppingCartDao;
 import com.codecool.shop.dao.SupplierDao;
+import com.codecool.shop.dao.implementation.*;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import javax.sql.DataSource;
@@ -27,10 +28,24 @@ public class DatabaseManager {
             setup();
         } catch (SQLException e){
             System.out.println("Couldn't connect to database");
+        } catch (IOException e){
+            System.out.println("Couldn't read properties file");
         }
     }
 
-    public void setup() throws SQLException {
+    public void setup() throws SQLException, IOException {
+        Properties connProps = getConnectionConfig();
+        if ("jdbc".equals(connProps.getProperty("dao"))) {
+            this.productDao = new ProductDaoJdbc();
+            this.productCategoryDao = new ProductCategoryDaoJdbc();
+            this.supplierDao = new SupplierDaoJdbc();
+            this.shoppingCartDao = new ShoppingCartDaoJdbc();
+        } else {
+            this.productDao = ProductDaoMem.getInstance();
+            this.productCategoryDao = ProductCategoryDaoMem.getInstance();
+            this.supplierDao = SupplierDaoMem.getInstance();
+            this.shoppingCartDao = ShoppingCartDaoMem.getInstance();
+        }
         DataSource dataSource = connect();
     }
 
