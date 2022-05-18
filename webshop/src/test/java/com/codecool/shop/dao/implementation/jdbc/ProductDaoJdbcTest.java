@@ -3,17 +3,23 @@ package com.codecool.shop.dao.implementation.jdbc;
 import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.SupplierDao;
+import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ProductCategory;
 import com.codecool.shop.model.Supplier;
 import org.junit.jupiter.api.*;
 
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ProductDaoJdbcTest {
     private static ProductDao productDao;
     private static void initDatabase() throws SQLException {
@@ -22,7 +28,7 @@ class ProductDaoJdbcTest {
             statement.execute("CREATE TABLE Products( " +
                     "    id SERIAL NOT NULL PRIMARY KEY, " +
                     "    name varchar NOT NULL, " +
-                    "    price int NOT NULL, " +
+                    "    price decimal NOT NULL, " +
                     "    currency varchar NOT NULL, " +
                     "    description varchar, " +
                     "    category_id int NOT NULL, " +
@@ -50,7 +56,7 @@ class ProductDaoJdbcTest {
 
         @Override
         public ProductCategory find(int id) {
-            return null;
+            return new ProductCategory("testCategory", "test", "test");
         }
 
         @Override
@@ -78,7 +84,7 @@ class ProductDaoJdbcTest {
 
         @Override
         public Supplier find(int id) {
-            return null;
+            return new Supplier("testSupplier", "test");
         }
 
         @Override
@@ -118,42 +124,56 @@ class ProductDaoJdbcTest {
     }
 
     @Test
-    void add() {
+    @Order(1)
+    void getProductByIndex() {
+        Product product = productDao.find(1);
+        assertEquals("Chinpokomon: Myrrh", product.getName());
+        assertEquals(new BigDecimal("29.9").setScale(2, RoundingMode.HALF_UP), product.getDefaultPrice());
+        assertEquals("he next addition of the famous Chinpokomon series. The Myrrh edition contains the legendary chinpokomon Donkeytron.", product.getDescription());
     }
 
     @Test
+    @Order(2)
     void find() {
     }
 
     @Test
+    @Order(3)
     void remove() {
     }
 
     @Test
+    @Order(4)
     void getAll() {
     }
 
     @Test
+    @Order(5)
     void getBy() {
     }
 
     @Test
+    @Order(6)
     void testGetBy() {
     }
 
     @Test
+    @Order(7)
     void getMultipleByCategories() {
     }
 
     @Test
+    @Order(8)
     void getMultipleBySuppliers() {
     }
 
     @Test
+    @Order(9)
     void getMultipleByCategoriesSuppliers() {
     }
 
     @Test
+    @Order(10)
     void getMultipleById() {
     }
 }
