@@ -29,7 +29,8 @@ CREATE TABLE Users(
     id SERIAL NOT NULL PRIMARY KEY,
     name varchar NOT NULL,
     password varchar NOT NULL,
-    email varchar NOT NULL
+    email varchar NOT NULL,
+    salt varchar NOT NULL
 );
 
 DROP TABLE IF EXISTS Carts CASCADE;
@@ -90,7 +91,7 @@ INSERT INTO Products(name, price, currency, description, category_id, supplier_i
 INSERT INTO Products(name, price, currency, description, category_id, supplier_id) VALUES ('Supra Mayro', 59.99, 'EUR', 'The best seller 90s super classic, Supra Mayro is finally avaliable on Smoke', 2, 1);
 INSERT INTO Products(name, price, currency, description, category_id, supplier_id) VALUES ('Somari', 30, 'EUR', 'The fastest man alive is here. Test your reflexes in a fast paced environment with Somari on Smoke', 2, 1);
 
-INSERT INTO Users(name, password, email) VALUES ('test','test','test@test.com');
+INSERT INTO Users(name, password, email, salt) VALUES ('test','test','test@test.com','[-85, 0, 120, 88, -104, -41, -36, -11, 81, -117, -1, -75, 2, -98, -51, -88]');
 
 INSERT INTO Carts(user_id) VALUES (1);
 
