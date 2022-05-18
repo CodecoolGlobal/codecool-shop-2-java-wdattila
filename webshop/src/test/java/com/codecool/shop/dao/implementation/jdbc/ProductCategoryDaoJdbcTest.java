@@ -69,7 +69,14 @@ class ProductCategoryDaoJdbcTest {
     }
 
     @Test
-    void add() {
+    void addCategory() {
+        ProductCategory productCategory = new ProductCategory("Test", "test", "test");
+        productCategoryDao.add(productCategory);
+        ProductCategory testCategory = productCategoryDao.find(4);
+
+        assertEquals(productCategory.getName(), testCategory.getName());
+        assertEquals(productCategory.getDepartment(), testCategory.getDepartment());
+        assertEquals(productCategory.getDescription(), testCategory.getDescription());
     }
 
     @Test
