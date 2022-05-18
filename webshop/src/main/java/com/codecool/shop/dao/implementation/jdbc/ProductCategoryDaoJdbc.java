@@ -6,6 +6,7 @@ import com.codecool.shop.model.ProductCategory;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ProductCategoryDaoJdbc implements ProductCategoryDao {
@@ -93,6 +94,30 @@ public class ProductCategoryDaoJdbc implements ProductCategoryDao {
 
     @Override
     public List<ProductCategory> getMultipleById(String ids) {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String[] idList = ids.split(",");
+            String sql = "SELECT id, name, department, description FROM Categories " +
+                    "WHERE id IN (" +
+                    String.join(",", Collections.nCopies(idList.length, "?")) +
+                    ")";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            for (int i=1; i<=idList.length; i++) {
+                statement.setInt(i, Integer.parseInt(idList[i-1]));
+            }
+            ResultSet rs = statement.executeQuery();
+            List<ProductCategory> productCategories = new ArrayList<>();
+            while(rs.next()){
+                String name = rs.getString("name");
+                String department = rs.getString("department");
+                String description = rs.getString("description");
+                ProductCategory productCategory = new ProductCategory(name, department, description);
+                productCategory.setId(rs.getInt("id"));
+                productCategories.add(productCategory);
+            }
+
+            return productCategories;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
