@@ -163,5 +163,8 @@ class ShoppingCartDaoJdbcTest {
 
     @Test
     void getMultipleById() {
+        List<ShoppingCart> shoppingCarts = shoppingCartDao.getMultipleById("1");
+
+        assertEquals(1, shoppingCarts.size());
     }
 }
