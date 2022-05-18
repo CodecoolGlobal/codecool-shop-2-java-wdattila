@@ -1,9 +1,11 @@
 package com.codecool.shop.dao.implementation.jdbc;
 
 import com.codecool.shop.dao.SupplierDao;
+import com.codecool.shop.model.ProductCategory;
 import com.codecool.shop.model.Supplier;
 
 import javax.sql.DataSource;
+import java.sql.*;
 import java.util.List;
 
 public class SupplierDaoJdbc implements SupplierDao {
@@ -20,7 +22,24 @@ public class SupplierDaoJdbc implements SupplierDao {
 
     @Override
     public Supplier find(int id) {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT name, description FROM Suppliers " +
+                    "WHERE id = ?";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            if(rs.next()){
+                String name = rs.getString("name");
+                String description = rs.getString("description");
+                Supplier supplier = new Supplier(name, description);
+                supplier.setId(id);
+                return supplier;
+            }else{
+                return null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
