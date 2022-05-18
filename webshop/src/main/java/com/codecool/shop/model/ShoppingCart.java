@@ -13,6 +13,11 @@ public class ShoppingCart extends BaseModel{
         products = new HashMap<>();
     }
 
+    public ShoppingCart() {
+        super("cart");
+        products = new HashMap<>();
+    }
+
     public Map<Product, Integer> getProducts() {
         return products;
     }
