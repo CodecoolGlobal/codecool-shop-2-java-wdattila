@@ -15,10 +15,13 @@ import java.math.RoundingMode;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Currency;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ProductDaoJdbcTest {
@@ -135,7 +138,20 @@ class ProductDaoJdbcTest {
 
     @Test
     @Order(2)
-    void find() {
+    void addProduct() {
+        Product productMock = mock(Product.class);
+        when(productMock.getProductCategoryId()).thenReturn(1);
+        when(productMock.getSupplierId()).thenReturn(1);
+        when(productMock.getName()).thenReturn("testName");
+        when(productMock.getDescription()).thenReturn("testDesc");
+        when(productMock.getDefaultCurrency()).thenReturn(Currency.getInstance("EUR"));
+        when(productMock.getDefaultPrice()).thenReturn(new BigDecimal("29.90"));
+
+        productDao.add(productMock);
+        Product testProduct = productDao.find(7);
+
+        assertEquals("testName", testProduct.getName());
+        assertEquals("testDesc", testProduct.getDescription());
     }
 
     @Test
