@@ -1,10 +1,6 @@
 package com.codecool.shop.dao.implementation.jdbc;
 
-import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.ProductDao;
-import com.codecool.shop.dao.SupplierDao;
-import com.codecool.shop.model.ProductCategory;
-import com.codecool.shop.model.Supplier;
 import org.junit.jupiter.api.*;
 
 import javax.sql.DataSource;
@@ -12,7 +8,6 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 
 class ProductDaoJdbcTest {
     private static ProductDao productDao;
@@ -38,62 +33,6 @@ class ProductDaoJdbcTest {
             connection.commit();
         }catch (SQLException e) {
             throw new RuntimeException(e);
-        }
-    }
-
-    private static class TestProductCategoryDao implements ProductCategoryDao{
-
-        @Override
-        public void add(ProductCategory category) {
-
-        }
-
-        @Override
-        public ProductCategory find(int id) {
-            return null;
-        }
-
-        @Override
-        public void remove(int id) {
-
-        }
-
-        @Override
-        public List<ProductCategory> getAll() {
-            return null;
-        }
-
-        @Override
-        public List<ProductCategory> getMultipleById(String ids) {
-            return null;
-        }
-    }
-
-    private static class TestSupplierDao implements SupplierDao {
-
-        @Override
-        public void add(Supplier supplier) {
-
-        }
-
-        @Override
-        public Supplier find(int id) {
-            return null;
-        }
-
-        @Override
-        public void remove(int id) {
-
-        }
-
-        @Override
-        public List<Supplier> getAll() {
-            return null;
-        }
-
-        @Override
-        public List<Supplier> getMultipleById(String ids) {
-            return null;
         }
     }
 
