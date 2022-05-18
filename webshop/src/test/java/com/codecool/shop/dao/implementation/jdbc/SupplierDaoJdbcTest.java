@@ -2,6 +2,8 @@ package com.codecool.shop.dao.implementation.jdbc;
 
 import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.SupplierDao;
+import com.codecool.shop.model.ProductCategory;
+import com.codecool.shop.model.Supplier;
 import org.junit.jupiter.api.*;
 
 import javax.sql.DataSource;
@@ -9,6 +11,8 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class SupplierDaoJdbcTest {
@@ -53,12 +57,15 @@ class SupplierDaoJdbcTest {
 
     @Test
     @Order(1)
-    void add() {
+    void getSupplierByIndex() {
+        Supplier supplier = supplierDao.find(1);
+        assertEquals("Gamma Freak", supplier.getName());
+        assertEquals("RPG Video game developer", supplier.getDescription());
     }
 
     @Test
     @Order(2)
-    void find() {
+    void add() {
     }
 
     @Test
