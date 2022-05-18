@@ -185,7 +185,26 @@ public class ProductDaoJdbc implements ProductDao {
 
     @Override
     public List<Product> getMultipleByCategoriesSuppliers(List<ProductCategory> productCategories, List<Supplier> suppliers) {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT id, name, price, currency, description, category_id, supplier_id FROM Products " +
+                    "WHERE category_id IN (" +
+                    String.join(",", Collections.nCopies(productCategories.size(), "?")) +
+                    ") AND " +
+                    "supplier_id IN (" +
+                    String.join(",", Collections.nCopies(suppliers.size(), "?")) +
+                    ") ";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            for (int i = 0; i < productCategories.size(); i++) {
+                statement.setInt(i+1, productCategories.get(i).getId());
+            }
+            for (int i = 0; i < suppliers.size(); i++) {
+                statement.setInt(i+1+productCategories.size(), suppliers.get(i).getId());
+            }
+            ResultSet rs = statement.executeQuery();
+            return getProductsFromResulSet(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
