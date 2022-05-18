@@ -208,6 +208,14 @@ class ProductDaoJdbcTest {
     @Test
     @Order(8)
     void getMultipleBySuppliers() {
+        Supplier supplierMock1 = mock(Supplier.class);
+        when(supplierMock1.getId()).thenReturn(2);
+        Supplier supplierMock2 = mock(Supplier.class);
+        when(supplierMock2.getId()).thenReturn(3);
+        List<Product> products = productDao.getMultipleBySuppliers(new ArrayList<Supplier>(
+                Arrays.asList(supplierMock1, supplierMock2)));
+
+        assertEquals(3, products.size());
     }
 
     @Test
