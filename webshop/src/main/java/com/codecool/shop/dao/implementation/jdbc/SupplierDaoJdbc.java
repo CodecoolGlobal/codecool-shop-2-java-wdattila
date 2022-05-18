@@ -7,6 +7,7 @@ import com.codecool.shop.model.Supplier;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SupplierDaoJdbc implements SupplierDao {
@@ -91,6 +92,29 @@ public class SupplierDaoJdbc implements SupplierDao {
 
     @Override
     public List<Supplier> getMultipleById(String ids) {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String[] idList = ids.split(",");
+            String sql = "SELECT id, name, description FROM Suppliers " +
+                    "WHERE id IN (" +
+                    String.join(",", Collections.nCopies(idList.length, "?")) +
+                    ")";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            for (int i=1; i<=idList.length; i++) {
+                statement.setInt(i, Integer.parseInt(idList[i-1]));
+            }
+            ResultSet rs = statement.executeQuery();
+            List<Supplier> suppliers = new ArrayList<>();
+            while(rs.next()){
+                String name = rs.getString("name");
+                String description = rs.getString("description");
+                Supplier supplier = new Supplier(name, description);
+                supplier.setId(rs.getInt("id"));
+                suppliers.add(supplier);
+            }
+
+            return suppliers;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
