@@ -182,7 +182,12 @@ class ProductDaoJdbcTest {
 
     @Test
     @Order(6)
-    void testGetBy() {
+    void getProductsByCategoryMatchNumberOfThem() {
+        ProductCategory productCategoryMock = mock(ProductCategory.class);
+        when(productCategoryMock.getId()).thenReturn(2);
+        List<Product> products = productDao.getBy(productCategoryMock);
+
+        assertEquals(3, products.size());
     }
 
     @Test
