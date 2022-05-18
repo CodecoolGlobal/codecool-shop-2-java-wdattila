@@ -133,7 +133,17 @@ class ShoppingCartDaoJdbcTest {
     }
 
     @Test
-    void find() {
+    void addCart() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        Product productMock = mock(Product.class);
+        when(productMock.getId()).thenReturn(2);
+        shoppingCart.addProduct(productMock, 5);
+        shoppingCart.setId(5);
+
+        shoppingCartDao.add(shoppingCart);
+
+        ShoppingCart testShoppingCart = shoppingCartDao.find(5);
+        assertEquals(new BigDecimal("10.00"), testShoppingCart.getTotalPrice());
     }
 
     @Test
