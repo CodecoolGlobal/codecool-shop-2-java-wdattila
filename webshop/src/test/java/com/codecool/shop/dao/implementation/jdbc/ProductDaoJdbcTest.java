@@ -242,5 +242,8 @@ class ProductDaoJdbcTest {
     @Test
     @Order(10)
     void getMultipleById() {
+        List<Product> products = productDao.getMultipleById("6,2");
+
+        assertEquals(2, products.size());
     }
 }
