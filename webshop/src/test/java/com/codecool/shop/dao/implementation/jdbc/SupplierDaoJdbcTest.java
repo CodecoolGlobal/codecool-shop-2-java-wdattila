@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -30,6 +31,8 @@ class SupplierDaoJdbcTest {
             connection.commit();
             statement.executeUpdate("INSERT INTO Suppliers(name, description) VALUES ('Gamma Freak', 'RPG Video game developer')");
             statement.executeUpdate("INSERT INTO Suppliers(name, description) VALUES ('Nintendont', 'Digital content and services');");
+            statement.executeUpdate("INSERT INTO Suppliers(name, description) VALUES ('Smegma', 'Platformer Video game developer')");
+            statement.executeUpdate("INSERT INTO Suppliers(name, description) VALUES ('Camco', 'Video game developer')");
             connection.commit();
         }catch (SQLException e) {
             throw new RuntimeException(e);
@@ -85,7 +88,10 @@ class SupplierDaoJdbcTest {
 
     @Test
     @Order(4)
-    void getAll() {
+    void gettingAllSuppliersMatchNumberOfThem() {
+        List<Supplier> suppliers = supplierDao.getAll();
+
+        assertEquals(4, suppliers.size());
     }
 
     @Test
