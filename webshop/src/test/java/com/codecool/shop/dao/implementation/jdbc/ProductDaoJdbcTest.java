@@ -164,7 +164,10 @@ class ProductDaoJdbcTest {
 
     @Test
     @Order(4)
-    void getAll() {
+    void gettingAllProductsMatchNumberOfThem() {
+        List<Product> products = productDao.getAll();
+
+        assertEquals(6, products.size());
     }
 
     @Test
