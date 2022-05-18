@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDaoJdbc implements ProductDao {
@@ -91,7 +92,32 @@ public class ProductDaoJdbc implements ProductDao {
 
     @Override
     public List<Product> getAll() {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT id, name, price, currency, description, category_id, supplier_id FROM Products ";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs = statement.executeQuery();
+            List<Product> products = new ArrayList<>();
+            while(rs.next()){
+                String name = rs.getString("name");
+                BigDecimal price = rs.getBigDecimal("price");
+                String currency = rs.getString("currency");
+                String description = rs.getString("description");
+                int categoryId = rs.getInt("category_id");
+                int supplierId = rs.getInt("supplier_id");
+                Product product = new Product(name,
+                        price.setScale(2, RoundingMode.HALF_UP),
+                        currency,
+                        description,
+                        productCategoryDao.find(categoryId),
+                        supplierDao.find(supplierId));
+                product.setId(rs.getInt("id"));
+                products.add(product);
+            }
+
+            return products;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
