@@ -2,9 +2,13 @@ package com.codecool.shop.dao.implementation.jdbc;
 
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.ShoppingCartDao;
+import com.codecool.shop.model.Product;
+import com.codecool.shop.model.ProductCategory;
 import com.codecool.shop.model.ShoppingCart;
 
 import javax.sql.DataSource;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCartDaoJdbc implements ShoppingCartDao {
@@ -23,7 +27,24 @@ public class ShoppingCartDaoJdbc implements ShoppingCartDao {
 
     @Override
     public ShoppingCart find(int id) {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT product_id, quantity FROM Cart_content " +
+                    "WHERE cart_id = ?";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            ShoppingCart shoppingCart = new ShoppingCart();
+            while(rs.next()){
+                int productId = rs.getInt("product_id");
+                int quantity = rs.getInt("quantity");
+                Product product = productDao.find(productId);
+                product.setId(productId);
+                shoppingCart.addProduct(product, quantity);
+            }
+            return shoppingCart;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
