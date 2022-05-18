@@ -172,7 +172,12 @@ class ProductDaoJdbcTest {
 
     @Test
     @Order(5)
-    void getBy() {
+    void getProductsBySupplierMatchNumberOfThem() {
+        Supplier supplierMock = mock(Supplier.class);
+        when(supplierMock.getId()).thenReturn(2);
+        List<Product> products = productDao.getBy(supplierMock);
+
+        assertEquals(2, products.size());
     }
 
     @Test
