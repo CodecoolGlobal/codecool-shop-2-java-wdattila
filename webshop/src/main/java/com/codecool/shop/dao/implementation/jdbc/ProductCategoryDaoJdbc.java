@@ -95,6 +95,9 @@ public class ProductCategoryDaoJdbc implements ProductCategoryDao {
     @Override
     public List<ProductCategory> getMultipleById(String ids) {
         try (Connection conn = dataSource.getConnection()) {
+            if(ids.equals("")){
+                return null;
+            }
             String[] idList = ids.split(",");
             String sql = "SELECT id, name, department, description FROM Categories " +
                     "WHERE id IN (" +
@@ -114,7 +117,6 @@ public class ProductCategoryDaoJdbc implements ProductCategoryDao {
                 productCategory.setId(rs.getInt("id"));
                 productCategories.add(productCategory);
             }
-
             return productCategories;
         } catch (SQLException e) {
             throw new RuntimeException(e);

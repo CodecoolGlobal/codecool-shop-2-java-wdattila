@@ -209,6 +209,9 @@ public class ProductDaoJdbc implements ProductDao {
 
     @Override
     public List<Product> getMultipleById(String ids) {
+        if(ids.equals("")){
+            return null;
+        }
         try (Connection conn = dataSource.getConnection()) {
             String[] idList = ids.split(",");
             String sql = "SELECT id, name, price, currency, description, category_id, supplier_id FROM Products " +

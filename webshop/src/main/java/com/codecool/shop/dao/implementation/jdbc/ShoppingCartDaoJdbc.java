@@ -94,6 +94,9 @@ public class ShoppingCartDaoJdbc implements ShoppingCartDao {
     @Override
     public List<ShoppingCart> getMultipleById(String ids) {
         try (Connection conn = dataSource.getConnection()) {
+            if(ids.equals("")){
+                return null;
+            }
             String[] idList = ids.split(",");
             String sql = "SELECT id, user_id FROM Carts " +
                     "WHERE id IN (" +
