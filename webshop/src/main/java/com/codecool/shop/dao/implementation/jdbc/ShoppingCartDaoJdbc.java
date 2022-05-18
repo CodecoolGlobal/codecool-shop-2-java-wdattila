@@ -10,6 +10,7 @@ import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class ShoppingCartDaoJdbc implements ShoppingCartDao {
     private DataSource dataSource;
@@ -22,7 +23,19 @@ public class ShoppingCartDaoJdbc implements ShoppingCartDao {
 
     @Override
     public void add(ShoppingCart shoppingCart) {
-
+        try (Connection conn = dataSource.getConnection()) {
+            for (Map.Entry<Product, Integer> productSet: shoppingCart.getProducts().entrySet()) {
+                String sql = "INSERT INTO Cart_content (product_id, quantity, cart_id) " +
+                        "VALUES (?, ?, ?)";
+                PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+                statement.setInt(1, productSet.getKey().getId());
+                statement.setInt(2, productSet.getValue());
+                statement.setInt(3, shoppingCart.getId());
+                statement.executeUpdate();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
