@@ -65,7 +65,13 @@ class SupplierDaoJdbcTest {
 
     @Test
     @Order(2)
-    void add() {
+    void addSupplier() {
+        Supplier supplier = new Supplier("Test", "test");
+        supplierDao.add(supplier);
+        Supplier testSupplier = supplierDao.find(supplier.getId());
+
+        assertEquals("Test", testSupplier.getName());
+        assertEquals("test", testSupplier.getDescription());
     }
 
     @Test
