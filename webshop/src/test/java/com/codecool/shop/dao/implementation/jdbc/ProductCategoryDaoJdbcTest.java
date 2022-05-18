@@ -4,9 +4,7 @@ import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.model.ProductCategory;
 import org.hsqldb.jdbc.JDBCCommonDataSource;
 import org.hsqldb.jdbc.JDBCDataSource;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -14,6 +12,7 @@ import java.sql.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ProductCategoryDaoJdbcTest {
     private static ProductCategoryDao productCategoryDao;
     private static void initDatabase() throws SQLException {
@@ -56,6 +55,7 @@ class ProductCategoryDaoJdbcTest {
     }
 
     @Test
+    @Order(1)
     void getCategoryByIndex() {
         ProductCategory productCategory = productCategoryDao.find(1);
         assertEquals(productCategory.getDepartment(), "Video Game");
@@ -63,12 +63,14 @@ class ProductCategoryDaoJdbcTest {
     }
 
     @Test
+    @Order(2)
     void getNonExistentCategoryByIndex() {
         ProductCategory productCategory = productCategoryDao.find(4);
         assertNull(productCategory);
     }
 
     @Test
+    @Order(3)
     void addCategory() {
         ProductCategory productCategory = new ProductCategory("Test", "test", "test");
         productCategoryDao.add(productCategory);
@@ -80,6 +82,7 @@ class ProductCategoryDaoJdbcTest {
     }
 
     @Test
+    @Order(4)
     void removeCategoryById() {
         productCategoryDao.remove(3);
 
@@ -87,10 +90,12 @@ class ProductCategoryDaoJdbcTest {
     }
 
     @Test
+    @Order(5)
     void getAll() {
     }
 
     @Test
+    @Order(6)
     void getMultipleById() {
     }
 }
