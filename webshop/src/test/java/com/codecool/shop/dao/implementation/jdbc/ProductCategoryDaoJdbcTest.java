@@ -9,6 +9,7 @@ import org.junit.jupiter.api.*;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.*;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -91,7 +92,10 @@ class ProductCategoryDaoJdbcTest {
 
     @Test
     @Order(5)
-    void getAll() {
+    void gettingAllCategoriesMatchNumberOfThem() {
+        List<ProductCategory> productCategories = productCategoryDao.getAll();
+
+        assertEquals(3, productCategories.size());
     }
 
     @Test
