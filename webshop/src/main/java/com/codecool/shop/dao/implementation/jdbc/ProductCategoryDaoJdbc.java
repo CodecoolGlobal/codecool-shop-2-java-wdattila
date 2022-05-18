@@ -16,7 +16,20 @@ public class ProductCategoryDaoJdbc implements ProductCategoryDao {
 
     @Override
     public void add(ProductCategory category) {
-
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "INSERT INTO Categories (name, department, description) " +
+                    "VALUES (?, ?, ?)";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            statement.setString(1, category.getName());
+            statement.setString(2, category.getDepartment());
+            statement.setString(3, category.getDescription());
+            statement.executeUpdate();
+            ResultSet resultSet = statement.getGeneratedKeys();
+            resultSet.next();
+            category.setId(resultSet.getInt(1));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
