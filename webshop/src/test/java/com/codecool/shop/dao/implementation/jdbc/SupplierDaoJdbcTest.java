@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class SupplierDaoJdbcTest {
@@ -76,7 +77,10 @@ class SupplierDaoJdbcTest {
 
     @Test
     @Order(3)
-    void remove() {
+    void removeSupplierById() {
+        supplierDao.remove(1);
+
+        assertNull(supplierDao.find(1));
     }
 
     @Test
