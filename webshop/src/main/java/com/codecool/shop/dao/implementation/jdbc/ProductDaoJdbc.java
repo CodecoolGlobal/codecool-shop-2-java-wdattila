@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ProductDaoJdbc implements ProductDao {
@@ -148,7 +149,20 @@ public class ProductDaoJdbc implements ProductDao {
 
     @Override
     public List<Product> getMultipleByCategories(List<ProductCategory> productCategories) {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT id, name, price, currency, description, category_id, supplier_id FROM Products " +
+                    "WHERE category_id IN (" +
+                    String.join(",", Collections.nCopies(productCategories.size(), "?")) +
+                    ")";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            for (int i = 0; i < productCategories.size(); i++) {
+                statement.setInt(i+1, productCategories.get(i).getId());
+            }
+            ResultSet rs = statement.executeQuery();
+            return getProductsFromResulSet(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
