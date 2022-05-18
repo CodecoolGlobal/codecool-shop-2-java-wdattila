@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS Products CASCADE;
 CREATE TABLE Products(
     id SERIAL NOT NULL PRIMARY KEY,
     name varchar NOT NULL,
-    price int NOT NULL,
+    price float NOT NULL,
     currency varchar NOT NULL,
     description varchar,
     category_id int NOT NULL,
