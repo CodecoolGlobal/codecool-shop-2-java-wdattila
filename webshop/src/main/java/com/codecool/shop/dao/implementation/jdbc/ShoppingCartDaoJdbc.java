@@ -75,7 +75,19 @@ public class ShoppingCartDaoJdbc implements ShoppingCartDao {
 
     @Override
     public List<ShoppingCart> getAll() {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT id, user_id FROM Carts ";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs = statement.executeQuery();
+            List<ShoppingCart> shoppingCarts = new ArrayList<>();
+            while(rs.next()){
+                int cartId = rs.getInt("id");
+                shoppingCarts.add(find(cartId));
+            }
+            return shoppingCarts;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
