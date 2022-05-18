@@ -42,7 +42,7 @@ public class DatabaseManager {
             DataSource dataSource = connect(connProps);
             this.productCategoryDao = new ProductCategoryDaoJdbc(dataSource);
             this.supplierDao = new SupplierDaoJdbc(dataSource);
-            this.shoppingCartDao = new ShoppingCartDaoJdbc(dataSource);
+            this.shoppingCartDao = new ShoppingCartDaoJdbc(dataSource, productDao);
             this.productDao = new ProductDaoJdbc(dataSource, this.productCategoryDao, this.supplierDao);
         } else {
             this.productDao = ProductDaoMem.getInstance();

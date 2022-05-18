@@ -1,5 +1,6 @@
 package com.codecool.shop.dao.implementation.jdbc;
 
+import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.ShoppingCartDao;
 import com.codecool.shop.model.ShoppingCart;
 
@@ -8,9 +9,11 @@ import java.util.List;
 
 public class ShoppingCartDaoJdbc implements ShoppingCartDao {
     private DataSource dataSource;
+    private ProductDao productDao;
 
-    public ShoppingCartDaoJdbc(DataSource dataSource) {
+    public ShoppingCartDaoJdbc(DataSource dataSource, ProductDao productDao) {
         this.dataSource = dataSource;
+        this.productDao = productDao;
     }
 
     @Override
