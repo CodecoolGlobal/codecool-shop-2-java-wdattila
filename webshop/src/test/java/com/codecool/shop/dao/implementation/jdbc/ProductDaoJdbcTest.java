@@ -1,19 +1,59 @@
 package com.codecool.shop.dao.implementation.jdbc;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import com.codecool.shop.dao.ProductDao;
+import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 class ProductDaoJdbcTest {
-
-    @BeforeEach
-    void setUp() {
+    private static ProductDao productDao;
+    private static void initDatabase() throws SQLException {
+        DataSource dataSource = JdbcTestUtil.getSource();
+        try (Connection connection = dataSource.getConnection(); Statement statement = connection.createStatement()) {
+            statement.execute("CREATE TABLE Products( " +
+                    "    id SERIAL NOT NULL PRIMARY KEY, " +
+                    "    name varchar NOT NULL, " +
+                    "    price int NOT NULL, " +
+                    "    currency varchar NOT NULL, " +
+                    "    description varchar, " +
+                    "    category_id int NOT NULL, " +
+                    "    supplier_id int NOT NULL " +
+                    ")");
+            connection.commit();
+            statement.executeUpdate("INSERT INTO Products(name, price, currency, description, category_id, supplier_id) VALUES ('Chinpokomon: Myrrh', 29.9, 'EUR', 'he next addition of the famous Chinpokomon series. The Myrrh edition contains the legendary chinpokomon Donkeytron.', 1, 2);");
+            statement.executeUpdate("INSERT INTO Products(name, price, currency, description, category_id, supplier_id) VALUES ('Chinpokomon: Platinum', 29.9, 'EUR', 'The next addition of the famous Chinpokomon series. The Platinum edition contains the legendary chinpokomon Lambtron.', 1, 2);");
+            statement.executeUpdate("INSERT INTO Products(name, price, currency, description, category_id, supplier_id) VALUES ('Muckman', 15, 'EUR', 'The Original first addition of the Muckman video game series', 3, 3);");
+            statement.executeUpdate("INSERT INTO Products(name, price, currency, description, category_id, supplier_id) VALUES ('Sanic', 26.9, 'EUR', 'How fast? Sanic fast. Be faster than light with Sanic the hedgehog', 2, 4);");
+            statement.executeUpdate("INSERT INTO Products(name, price, currency, description, category_id, supplier_id) VALUES ('Supra Mayro', 59.99, 'EUR', 'The best seller 90s super classic, Supra Mayro is finally avaliable on Smoke', 2, 1);");
+            statement.executeUpdate("INSERT INTO Products(name, price, currency, description, category_id, supplier_id) VALUES ('Somari', 30, 'EUR', 'The fastest man alive is here. Test your reflexes in a fast paced environment with Somari on Smoke', 2, 1);");
+            connection.commit();
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    @AfterEach
-    void tearDown() {
+    @BeforeAll
+    public static void init() throws SQLException, ClassNotFoundException, IOException {
+        Class.forName("org.hsqldb.jdbc.JDBCDriver");
+
+        // initialize database
+        initDatabase();
+        productDao = new ProductDaoJdbc(JdbcTestUtil.getSource());
+    }
+
+    @AfterAll
+    public static void destroy() throws SQLException, ClassNotFoundException, IOException {
+        DataSource dataSource = JdbcTestUtil.getSource();
+        try (Connection connection = dataSource.getConnection(); Statement statement = connection.createStatement();) {
+            statement.executeUpdate("DROP TABLE Products");
+            connection.commit();
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Test
