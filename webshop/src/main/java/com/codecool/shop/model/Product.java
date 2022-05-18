@@ -61,6 +61,14 @@ public class Product extends BaseModel {
         this.supplier.addProduct(this);
     }
 
+    public int getProductCategoryId(){
+        return productCategory.id;
+    }
+
+    public int getSupplierId(){
+        return supplier.id;
+    }
+
     public BigDecimal getPriceValue(){
         return defaultPrice;
     }

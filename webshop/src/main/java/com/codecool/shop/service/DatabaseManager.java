@@ -40,10 +40,10 @@ public class DatabaseManager {
         Properties connProps = getConnectionConfig();
         if ("jdbc".equals(connProps.getProperty("dao"))) {
             DataSource dataSource = connect(connProps);
-            this.productDao = new ProductDaoJdbc(dataSource);
             this.productCategoryDao = new ProductCategoryDaoJdbc(dataSource);
             this.supplierDao = new SupplierDaoJdbc(dataSource);
             this.shoppingCartDao = new ShoppingCartDaoJdbc(dataSource);
+            this.productDao = new ProductDaoJdbc(dataSource, this.productCategoryDao, this.supplierDao);
         } else {
             this.productDao = ProductDaoMem.getInstance();
             this.productCategoryDao = ProductCategoryDaoMem.getInstance();
