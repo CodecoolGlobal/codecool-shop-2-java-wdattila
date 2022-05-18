@@ -5,6 +5,7 @@ import com.codecool.shop.model.ProductCategory;
 
 import javax.sql.DataSource;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductCategoryDaoJdbc implements ProductCategoryDao {
@@ -70,7 +71,24 @@ public class ProductCategoryDaoJdbc implements ProductCategoryDao {
 
     @Override
     public List<ProductCategory> getAll() {
-        return null;
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT id, name, department, description FROM Categories ";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs = statement.executeQuery();
+            List<ProductCategory> productCategories = new ArrayList<>();
+            while(rs.next()){
+                String name = rs.getString("name");
+                String department = rs.getString("department");
+                String description = rs.getString("description");
+                ProductCategory productCategory = new ProductCategory(name, department, description);
+                productCategory.setId(rs.getInt("id"));
+                productCategories.add(productCategory);
+            }
+
+            return productCategories;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
