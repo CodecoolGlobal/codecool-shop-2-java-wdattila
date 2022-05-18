@@ -221,6 +221,22 @@ class ProductDaoJdbcTest {
     @Test
     @Order(9)
     void getMultipleByCategoriesSuppliers() {
+        ProductCategory productCategoryMock1 = mock(ProductCategory.class);
+        when(productCategoryMock1.getId()).thenReturn(2);
+        ProductCategory productCategoryMock2 = mock(ProductCategory.class);
+        when(productCategoryMock2.getId()).thenReturn(3);
+
+        Supplier supplierMock1 = mock(Supplier.class);
+        when(supplierMock1.getId()).thenReturn(2);
+        Supplier supplierMock2 = mock(Supplier.class);
+        when(supplierMock2.getId()).thenReturn(3);
+        List<Product> products = productDao.getMultipleByCategoriesSuppliers(
+                new ArrayList<ProductCategory>(
+                        Arrays.asList(productCategoryMock1, productCategoryMock2)),
+                new ArrayList<Supplier>(
+                        Arrays.asList(supplierMock1, supplierMock2)));
+
+        assertEquals(1, products.size());
     }
 
     @Test
