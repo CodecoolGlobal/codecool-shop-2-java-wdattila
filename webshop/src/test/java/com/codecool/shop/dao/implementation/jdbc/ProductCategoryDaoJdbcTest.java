@@ -100,6 +100,9 @@ class ProductCategoryDaoJdbcTest {
 
     @Test
     @Order(6)
-    void getMultipleById() {
+    void getMultipleCategoriesWithSpecifiedIds() {
+        List<ProductCategory> productCategories = productCategoryDao.getMultipleById("1,2");
+
+        assertEquals(2, productCategories.size());
     }
 }
