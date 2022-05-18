@@ -5,6 +5,7 @@ import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.ShoppingCartDao;
 import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ProductCategory;
+import com.codecool.shop.model.ShoppingCart;
 import com.codecool.shop.model.Supplier;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -12,12 +13,15 @@ import org.junit.jupiter.api.Test;
 
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class ShoppingCartDaoJdbcTest {
     private static ShoppingCartDao shoppingCartDao;
@@ -36,7 +40,7 @@ class ShoppingCartDaoJdbcTest {
                     "    product_id int NOT NULL, " +
                     "    quantity int NOT NULL, " +
                     "    cart_id int NOT NULL " +
-                    ");");
+                    ")");
             connection.commit();
             statement.executeUpdate("INSERT INTO cart_content(product_id, quantity, cart_id) VALUES (5, 1, 1);");
             statement.executeUpdate("INSERT INTO Cart_content(product_id, quantity, cart_id) VALUES (1, 2, 1);");
@@ -54,7 +58,9 @@ class ShoppingCartDaoJdbcTest {
 
         @Override
         public Product find(int id) {
-            return null;
+            Product productMock = mock(Product.class);
+            when(productMock.getPriceValue()).thenReturn(new BigDecimal("2.00"));
+            return productMock;
         }
 
         @Override
@@ -121,7 +127,9 @@ class ShoppingCartDaoJdbcTest {
     }
 
     @Test
-    void add() {
+    void getCartByIndex() {
+        ShoppingCart shoppingCart = shoppingCartDao.find(1);
+        assertEquals(new BigDecimal("6.00"), shoppingCart.getTotalPrice());
     }
 
     @Test
