@@ -80,7 +80,10 @@ class ProductCategoryDaoJdbcTest {
     }
 
     @Test
-    void remove() {
+    void removeCategoryById() {
+        productCategoryDao.remove(3);
+
+        assertNull(productCategoryDao.find(3));
     }
 
     @Test
