@@ -12,9 +12,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class SupplierDaoJdbcTest {
@@ -96,6 +96,18 @@ class SupplierDaoJdbcTest {
 
     @Test
     @Order(5)
-    void getMultipleById() {
+    void getMultipleSuppliersWithSpecifiedIdsMatchNumberOfThem() {
+        List<Supplier> suppliers = supplierDao.getMultipleById("3,2");
+
+        assertEquals(2, suppliers.size());
+    }
+
+    @Test
+    @Order(6)
+    void getMultipleSuppliersWithSpecifiedIdsContainRightElements() {
+        List<Supplier> suppliers = supplierDao.getMultipleById("3,2");
+        List<String> names = suppliers.stream().map(Supplier::getName).collect(Collectors.toList());
+        assertTrue(names.contains("Nintendont"));
+        assertTrue(names.contains("Smegma"));
     }
 }
