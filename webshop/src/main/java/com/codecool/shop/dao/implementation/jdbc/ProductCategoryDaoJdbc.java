@@ -96,7 +96,7 @@ public class ProductCategoryDaoJdbc implements ProductCategoryDao {
     public List<ProductCategory> getMultipleById(String ids) {
         try (Connection conn = dataSource.getConnection()) {
             if(ids.equals("")){
-                return null;
+                return new ArrayList<>();
             }
             String[] idList = ids.split(",");
             String sql = "SELECT id, name, department, description FROM Categories " +

@@ -210,7 +210,7 @@ public class ProductDaoJdbc implements ProductDao {
     @Override
     public List<Product> getMultipleById(String ids) {
         if(ids.equals("")){
-            return null;
+            return new ArrayList<>();
         }
         try (Connection conn = dataSource.getConnection()) {
             String[] idList = ids.split(",");

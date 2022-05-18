@@ -95,7 +95,7 @@ public class ShoppingCartDaoJdbc implements ShoppingCartDao {
     public List<ShoppingCart> getMultipleById(String ids) {
         try (Connection conn = dataSource.getConnection()) {
             if(ids.equals("")){
-                return null;
+                return new ArrayList<>();
             }
             String[] idList = ids.split(",");
             String sql = "SELECT id, user_id FROM Carts " +
