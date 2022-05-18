@@ -15,6 +15,8 @@ import java.math.RoundingMode;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Currency;
 import java.util.List;
 
@@ -193,6 +195,14 @@ class ProductDaoJdbcTest {
     @Test
     @Order(7)
     void getMultipleByCategories() {
+        ProductCategory productCategoryMock1 = mock(ProductCategory.class);
+        when(productCategoryMock1.getId()).thenReturn(2);
+        ProductCategory productCategoryMock2 = mock(ProductCategory.class);
+        when(productCategoryMock2.getId()).thenReturn(3);
+        List<Product> products = productDao.getMultipleByCategories(new ArrayList<ProductCategory>(
+                Arrays.asList(productCategoryMock1, productCategoryMock2)));
+
+        assertEquals(4, products.size());
     }
 
     @Test
