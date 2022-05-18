@@ -156,6 +156,9 @@ class ShoppingCartDaoJdbcTest {
 
     @Test
     void getAll() {
+        List<ShoppingCart> shoppingCarts = shoppingCartDao.getAll();
+
+        assertEquals(1, shoppingCarts.size());
     }
 
     @Test
