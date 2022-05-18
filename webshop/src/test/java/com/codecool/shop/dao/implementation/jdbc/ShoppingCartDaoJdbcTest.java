@@ -148,6 +148,10 @@ class ShoppingCartDaoJdbcTest {
 
     @Test
     void remove() {
+        shoppingCartDao.remove(1);
+        ShoppingCart shoppingCart = shoppingCartDao.find(1);
+
+        assertTrue(shoppingCart.getProducts().isEmpty());
     }
 
     @Test
