@@ -45,6 +45,7 @@ public class DatabaseManager {
             this.supplierDao = new SupplierDaoJdbc(dataSource);
             this.shoppingCartDao = new ShoppingCartDaoJdbc(dataSource, productDao);
             this.productDao = new ProductDaoJdbc(dataSource, this.productCategoryDao, this.supplierDao);
+            this.userDao = new UserDaoJdbc(dataSource);
             this.userCartDao = new UserCartDaoJdbc(dataSource);
         } else {
             this.productDao = ProductDaoMem.getInstance();
