@@ -110,27 +110,9 @@ function isEmptyCart(){
     return Object.keys(localStorage).length > 0
 }
 
-async function handlePaymentClick(event){
-    let data = await dataHandler.get_payment_info(localStorage);
-    postToPayment(data)
-    localStorage.clear()
-}
-
-function postToPayment(data){
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = new URL(data.targetUrl, window.location.href).href;
-    document.body.appendChild(form);
-
-    for (const key in data) {
-        const formField = document.createElement('input');
-        formField.type = 'hidden';
-        formField.name = key;
-        formField.value = data[key];
-
-        form.appendChild(formField);
-    }
-    form.submit();
+function handlePaymentClick(event){
+    let url = new URL("/checkout",window.location.href)
+    window.location.href = url.href;
 }
 
 initAddToCart()
