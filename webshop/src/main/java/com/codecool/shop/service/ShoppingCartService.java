@@ -7,6 +7,7 @@ import com.codecool.shop.dao.implementation.mem.ProductDaoMem;
 import com.codecool.shop.dao.implementation.mem.ShoppingCartDaoMem;
 import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ShoppingCart;
+import com.codecool.shop.model.User;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -28,8 +29,8 @@ public class ShoppingCartService {
     }
 
     public void addShoppingCart(ShoppingCart shoppingCart, int userId) {
-        int cartId = userCartDao.findCartId(userId);
-        shoppingCart.setId(cartId);
+        userCartDao.remove(userCartDao.findCartId(userId));
+        userCartDao.add(userId, shoppingCart);
         shoppingCartDao.add(shoppingCart);
     }
 
