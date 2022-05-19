@@ -1,10 +1,10 @@
-alert("here we go again")
+import {dataHandler} from "./dataHandler.js";
 
 function showRelevantUserButtons(){
-    sessionStorage.setItem("username","test")
     let username = sessionStorage.getItem("username")
     let buttonContainer = document.getElementById("user-buttons")
     if(username === null){
+        removeSaveCartButton()
         buttonContainer.innerHTML =
             "<li class=\"nav-item\">" +
                 "<div class=\"btn-nav\"><a class=\"btn btn-secondary\" href=\"/login\">" +
@@ -19,16 +19,18 @@ function showRelevantUserButtons(){
                 "</div>" +
             "</li>"
     }else{
+        createSaveCartButton()
         buttonContainer.innerHTML =
             "<li class=\"nav-item\">" +
-                "<div class=\"btn-nav\"><a class=\"btn btn-secondary\" href=\"/logout\">" +
+                "<div class=\"btn-nav\"><a class=\"btn btn-secondary\" href=\"/logout\" id='logout'>" +
                     "Logout" +
                 "</a>" +
                 "</div>" +
             "</li>" +
             "<li>"+
-                `Logged in as: ${username}`+
+                `<div style='color:white; margin-top: 5px; margin-left: 10px'> Logged in as: ${username} </div>`+
             "</li>"
+        initLogoutButton()
     }
 }
 
