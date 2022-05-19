@@ -48,14 +48,21 @@ public class RegisterController extends HttpServlet {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-
-        // create user in database
-        session.setAttribute("username", "chris");
-        if(session.getAttribute("username") != null){
-            response.sendRedirect(request.getContextPath()+"/");
-        }else{
+        UserService userService = dbManager.getUserService();
+        if (userService.getUserByNameOrEmail(username,email) != null) {
+            context.setVariable("user",username);
             engine.process("registerPage.html", context, response.getWriter());
+        } else {
+            User user = null;
+            try {
+                byte[] salt = HashManager.generateSalt();
+                user = new User(username, email, HashManager.passwordToHash(password, salt), salt);
+            } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
+                e.printStackTrace();
+            }
+            userService.addUser(user);
+            session.setAttribute("username", username);
+            response.sendRedirect("/login");
         }
-        // switch until here
     }
 }
