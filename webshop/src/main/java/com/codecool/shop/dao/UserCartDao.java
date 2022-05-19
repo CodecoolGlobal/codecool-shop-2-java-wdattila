@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface UserCartDao {
     void add(User user, ShoppingCart shoppingCart);
-    Supplier find(int id);
+    int findCartId(int userId);
     void remove(int id);
 }
