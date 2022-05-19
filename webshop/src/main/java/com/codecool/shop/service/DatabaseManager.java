@@ -24,6 +24,7 @@ public class DatabaseManager {
     private ShoppingCartDao shoppingCartDao;
     private UserDao userDao;
     private UserCartDao userCartDao;
+    private OrderDao orderDao;
 
     private static Logger logger = LoggerFactory.getLogger(LoginController.class);
 
@@ -43,9 +44,10 @@ public class DatabaseManager {
             DataSource dataSource = connect(connProps);
             this.productCategoryDao = new ProductCategoryDaoJdbc(dataSource);
             this.supplierDao = new SupplierDaoJdbc(dataSource);
-            this.shoppingCartDao = new ShoppingCartDaoJdbc(dataSource, productDao);
             this.productDao = new ProductDaoJdbc(dataSource, this.productCategoryDao, this.supplierDao);
+            this.shoppingCartDao = new ShoppingCartDaoJdbc(dataSource, productDao);
             this.userCartDao = new UserCartDaoJdbc(dataSource);
+            this.orderDao = new OrderDaoJdbc(dataSource);
         } else {
             this.productDao = ProductDaoMem.getInstance();
             this.productCategoryDao = ProductCategoryDaoMem.getInstance();
@@ -86,6 +88,6 @@ public class DatabaseManager {
     }
 
     public ShoppingCartService getShoppingCartService(){
-        return new ShoppingCartService(shoppingCartDao, productDao, userCartDao);
+        return new ShoppingCartService(shoppingCartDao, productDao, userCartDao, orderDao);
     }
 }
