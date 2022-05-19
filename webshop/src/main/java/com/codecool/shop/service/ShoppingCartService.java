@@ -2,6 +2,7 @@ package com.codecool.shop.service;
 
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.ShoppingCartDao;
+import com.codecool.shop.dao.UserCartDao;
 import com.codecool.shop.dao.implementation.mem.ProductDaoMem;
 import com.codecool.shop.dao.implementation.mem.ShoppingCartDaoMem;
 import com.codecool.shop.model.Product;
@@ -14,13 +15,21 @@ import java.util.Map;
 public class ShoppingCartService {
     private ShoppingCartDao shoppingCartDao;
     private ProductDao productDao;
+    private UserCartDao userCartDao;
 
-    public ShoppingCartService(ShoppingCartDao shoppingCartDao, ProductDao productDao) {
+    public ShoppingCartService(ShoppingCartDao shoppingCartDao, ProductDao productDao, UserCartDao userCartDao) {
         this.shoppingCartDao = shoppingCartDao;
         this.productDao = productDao;
+        this.userCartDao = userCartDao;
     }
 
     public void addShoppingCart(ShoppingCart shoppingCart) {
+        shoppingCartDao.add(shoppingCart);
+    }
+
+    public void addShoppingCart(ShoppingCart shoppingCart, int userId) {
+        int cartId = userCartDao.findCartId(userId);
+        shoppingCart.setId(cartId);
         shoppingCartDao.add(shoppingCart);
     }
 
