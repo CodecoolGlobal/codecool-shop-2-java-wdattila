@@ -17,12 +17,17 @@
     <div class="jumbotron text-center">
         <br><h1>Login</h1>
     </div>
+    <th:block th:switch="${loginAttempt}">
+        <div class="text-center" style="color: red" th:case="false">
+            <p>Invalid login credentials, please try again!</p>
+        </div>
+    </th:block>
     <div class="text-center" style="margin-top: 20px">
         <form action="/login" method="post">
             <h4 style="color:white">Username/E-mail:</h4>
             <input type="text" name="user">
             <h4 style="color:white; margin-top: 10px">Password:</h4>
-            <input text="text" name="password">
+            <input type="password" name="password">
             <br>
             <a href="/register">Not registered yet? Click here!</a>
             <br><br><input type="submit" value="Login">

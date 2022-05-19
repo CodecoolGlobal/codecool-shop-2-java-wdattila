@@ -1,18 +1,15 @@
 package com.codecool.shop.service;
 
-import com.codecool.shop.dao.ProductCategoryDao;
-import com.codecool.shop.dao.ProductDao;
-import com.codecool.shop.dao.ShoppingCartDao;
-import com.codecool.shop.dao.SupplierDao;
-import com.codecool.shop.dao.implementation.jdbc.ProductCategoryDaoJdbc;
-import com.codecool.shop.dao.implementation.jdbc.ProductDaoJdbc;
-import com.codecool.shop.dao.implementation.jdbc.ShoppingCartDaoJdbc;
-import com.codecool.shop.dao.implementation.jdbc.SupplierDaoJdbc;
+import com.codecool.shop.controller.LoginController;
+import com.codecool.shop.dao.*;
+import com.codecool.shop.dao.implementation.jdbc.*;
 import com.codecool.shop.dao.implementation.mem.ProductCategoryDaoMem;
 import com.codecool.shop.dao.implementation.mem.ProductDaoMem;
 import com.codecool.shop.dao.implementation.mem.ShoppingCartDaoMem;
 import com.codecool.shop.dao.implementation.mem.SupplierDaoMem;
 import org.postgresql.ds.PGSimpleDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
@@ -25,6 +22,9 @@ public class DatabaseManager {
     private ProductCategoryDao productCategoryDao;
     private SupplierDao supplierDao;
     private ShoppingCartDao shoppingCartDao;
+    private UserDao userDao;
+
+    private static Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     public DatabaseManager() {
         try {
@@ -54,9 +54,9 @@ public class DatabaseManager {
 
     private DataSource connect(Properties connProps) throws SQLException {
         PGSimpleDataSource dataSource = new PGSimpleDataSource();
-        String dbName = System.getenv(connProps.getProperty("database"));
-        String user = System.getenv(connProps.getProperty("user"));
-        String password = System.getenv(connProps.getProperty("password"));
+        String dbName = connProps.getProperty("database");
+        String user = System.getProperty(connProps.getProperty("user"));
+        String password = System.getProperty(connProps.getProperty("password"));
 
         dataSource.setDatabaseName(dbName);
         dataSource.setUser(user);
@@ -77,6 +77,10 @@ public class DatabaseManager {
 
     public ProductService getProductService(){
         return new ProductService(productDao, productCategoryDao, supplierDao);
+    }
+
+    public UserService getUserService(){
+        return new UserService(userDao);
     }
 
     public ShoppingCartService getShoppingCartService(){
