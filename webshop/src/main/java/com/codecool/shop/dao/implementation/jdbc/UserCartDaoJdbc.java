@@ -16,6 +16,24 @@ public class UserCartDaoJdbc implements UserCartDao {
     }
 
     @Override
+    public int findCartId(int userId) {
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT id FROM carts " +
+                    "WHERE user_id = ?";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            statement.setInt(1, userId);
+            ResultSet rs = statement.executeQuery();
+            if(rs.next()){
+                return rs.getInt("id");
+            }else{
+                return 0;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
     public void add(User user, ShoppingCart shoppingCart) {
         try (Connection conn = dataSource.getConnection()) {
             String sql = "INSERT INTO carts (user_id) " +
@@ -29,11 +47,6 @@ public class UserCartDaoJdbc implements UserCartDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    public Supplier find(int id) {
-        return null;
     }
 
     @Override

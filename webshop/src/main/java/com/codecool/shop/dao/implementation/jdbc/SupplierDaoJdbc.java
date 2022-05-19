@@ -35,17 +35,21 @@ public class SupplierDaoJdbc implements SupplierDao {
     }
 
     @Override
-    public int findCartId(int userId) {
+    public Supplier find(int id) {
         try (Connection conn = dataSource.getConnection()) {
-            String sql = "SELECT id FROM carts " +
-                    "WHERE user_id = ?";
+            String sql = "SELECT name, description FROM Suppliers " +
+                    "WHERE id = ?";
             PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setInt(1, userId);
+            statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             if(rs.next()){
-                return rs.getInt("id");
+                String name = rs.getString("name");
+                String description = rs.getString("description");
+                Supplier supplier = new Supplier(name, description);
+                supplier.setId(id);
+                return supplier;
             }else{
-                return 0;
+                return null;
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
