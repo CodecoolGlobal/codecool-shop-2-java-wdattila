@@ -29,52 +29,14 @@
 <div class="container" style="padding: 200px">
   <div class="row">
     <div class="col-lg-4 mb-lg-0 mb-3">
-      <div class="card p-3">
-        <div class="img-box">
-          <img src="https://www.freepnglogos.com/uploads/visa-logo-download-png-21.png" alt="">
-        </div>
-        <div class="number">
-          <label class="fw-bold" for="">**** **** **** 1060</label>
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-          <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
-          <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
-        </div>
-      </div>
     </div>
     <div class="col-lg-4 mb-lg-0 mb-3">
-      <div class="card p-3">
-        <div class="img-box">
-          <img src="https://www.freepnglogos.com/uploads/mastercard-png/file-mastercard-logo-svg-wikimedia-commons-4.png"
-               alt="">
-        </div>
-        <div class="number">
-          <label class="fw-bold">**** **** **** 1060</label>
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-          <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
-          <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
-        </div>
-      </div>
     </div>
     <div class="col-lg-4 mb-lg-0 mb-3">
-      <div class="card p-3">
-        <div class="img-box">
-          <img src="https://www.freepnglogos.com/uploads/discover-png-logo/credit-cards-discover-png-logo-4.png"
-               alt="">
-        </div>
-        <div class="number">
-          <label class="fw-bold">**** **** **** 1060</label>
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-          <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
-          <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
-        </div>
-      </div>
     </div>
     <div class="col-12 mt-4">
       <div class="card p-3">
-        <p class="mb-0 fw-bold h4">Payment Methods</p>
+        <p class="mb-0 fw-bold h4">Order information</p>
       </div>
     </div>
     <div class="col-12">
@@ -118,7 +80,7 @@
           <div class="collapse show p-3 pt-0" id="collapseExample2">
             <div class="row">
               <div class="col">
-                <form action="" class="form" method="post" th:action="${url}">
+                <form action="/checkout" class="form" method="post">
                   <div class="row">
 
                     <div class="col-12">
@@ -198,59 +160,8 @@
                         <label for="" class="form__label">Street Address</label>
                       </div>
                     </div>
-
-                    <div class="col-12">
-                      <strong>Credit Card detail</strong>
-                      <br><br>
-                    </div>
-
-                  <div class="col-12">
-                    <div class="form__div">
-                      <input id="cardNumber" required class="form-control" type="tel" inputmode="numeric"
-                             pattern="[0-9]{4} *[0-9]{4} *[0-9]{4} *[0-9]{4}" autocomplete="cc-number" maxlength="19" placeholder="" name="cardNumber">
-                      <label for="" class="form__label">Card Number</label>
-                    </div>
-                  </div>
-
-                  <div class="col expDate">
-                    <div class="row">
-                      <div class="col-2">
-                        <div class="form__div">
-                            <input type="text" class="form-control" maxlength="2" placeholder=" XX" name="cardMonth">
-                            <label for="" class="form__label">MM</label>
-                        </div>
-                      </div>
-
-                      <div class="col-1" style="padding: 12px; width: 1px">
-                        /
-                      </div>
-
-                      <div class="col-2">
-                        <div class=" form__div">
-                          <input type="text" class="form-control" maxlength="2" placeholder=" XX" name="cardYear">
-                          <label for="" class="form__label">YY</label>
-                        </div>
-                      </div>
-
-                      <div class="col-3">
-                        <div class="form__div">
-                          <input type="text" class="form-control" maxlength="3" placeholder=" XXX" name="cardCVV">
-                          <label for="" class="form__label">cvv code</label>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-                    <div class="col-12">
-                      <div class="form__div">
-                        <input type="text" class="form-control" placeholder=" " name="cardName">
-                        <label for="" class="form__label">name on the card</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
 <!--                      -->
-                      <button type="submit" class="btn btn-primary w-25" th:text="${'Pay ' + price + ' EUR'}"> Pay 0.00 EUR</button>
+                      <button type="submit" class="btn btn-primary w-25">Pay</button>
                     </div>
                   </div>
                 </form>
