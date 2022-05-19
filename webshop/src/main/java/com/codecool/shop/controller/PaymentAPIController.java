@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -47,7 +48,8 @@ public class PaymentAPIController extends HttpServlet {
         products.keySet().
                 forEach(p -> cartService.addProductToCartById(cart, Integer.parseInt(p), products.get(p).getAsInt()));
 
-        //int userId = Integer.parseInt(req.getParameter("userId"));
+        HttpSession session = req.getSession();
+
         cartService.addShoppingCart(cart, 1);
 
         Map<String, String> params = new HashMap<>();
