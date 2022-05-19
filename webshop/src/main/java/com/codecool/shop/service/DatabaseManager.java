@@ -13,6 +13,8 @@ import com.codecool.shop.dao.implementation.mem.ProductDaoMem;
 import com.codecool.shop.dao.implementation.mem.ShoppingCartDaoMem;
 import com.codecool.shop.dao.implementation.mem.SupplierDaoMem;
 import org.postgresql.ds.PGSimpleDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
@@ -25,6 +27,9 @@ public class DatabaseManager {
     private ProductCategoryDao productCategoryDao;
     private SupplierDao supplierDao;
     private ShoppingCartDao shoppingCartDao;
+    private UserDao userDao;
+
+    private static Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     public DatabaseManager() {
         try {
@@ -44,6 +49,7 @@ public class DatabaseManager {
             this.productCategoryDao = new ProductCategoryDaoJdbc(dataSource);
             this.supplierDao = new SupplierDaoJdbc(dataSource);
             this.shoppingCartDao = new ShoppingCartDaoJdbc(dataSource);
+            this.userDao = new UserDaoJdbc(dataSource);
         } else {
             this.productDao = ProductDaoMem.getInstance();
             this.productCategoryDao = ProductCategoryDaoMem.getInstance();
@@ -77,6 +83,10 @@ public class DatabaseManager {
 
     public ProductService getProductService(){
         return new ProductService(productDao, productCategoryDao, supplierDao);
+    }
+
+    public UserService getUserService(){
+        return new UserService(userDao);
     }
 
     public ShoppingCartService getShoppingCartService(){
