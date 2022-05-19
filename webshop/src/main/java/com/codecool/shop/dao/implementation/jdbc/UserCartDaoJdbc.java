@@ -34,12 +34,12 @@ public class UserCartDaoJdbc implements UserCartDao {
     }
 
     @Override
-    public void add(User user, ShoppingCart shoppingCart) {
+    public void add(int userId, ShoppingCart shoppingCart) {
         try (Connection conn = dataSource.getConnection()) {
             String sql = "INSERT INTO carts (user_id) " +
                     "VALUES (?)";
             PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setInt(1, user.getId());
+            statement.setInt(1, userId);
             statement.executeUpdate();
             ResultSet resultSet = statement.getGeneratedKeys();
             resultSet.next();
