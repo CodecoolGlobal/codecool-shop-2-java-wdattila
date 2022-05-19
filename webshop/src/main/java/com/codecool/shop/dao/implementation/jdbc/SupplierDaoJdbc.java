@@ -93,6 +93,9 @@ public class SupplierDaoJdbc implements SupplierDao {
     @Override
     public List<Supplier> getMultipleById(String ids) {
         try (Connection conn = dataSource.getConnection()) {
+            if(ids.equals("")){
+                return new ArrayList<>();
+            }
             String[] idList = ids.split(",");
             String sql = "SELECT id, name, description FROM Suppliers " +
                     "WHERE id IN (" +
