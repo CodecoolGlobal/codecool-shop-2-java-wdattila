@@ -17,6 +17,11 @@
 <div class="jumbotron text-center">
     <br><h1>Register</h1>
 </div>
+<th:block th:switch="${user} == null">
+    <div class="text-center" style="color: red" th:case="false">
+        <p>Username/E-mail already in use, please use another one!</p>
+    </div>
+</th:block>
 <div class="text-center" style="margin-top: 20px">
     <form action="/register" method="post">
         <h4 style="color:white">Username:</h4>
