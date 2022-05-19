@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS Categories;
+DROP TABLE IF EXISTS Categories CASCADE;
 CREATE TABLE Categories(
     id SERIAL NOT NULL PRIMARY KEY,
     name varchar NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE Categories(
     description varchar
 );
 
-DROP TABLE IF EXISTS Suppliers;
+DROP TABLE IF EXISTS Suppliers CASCADE;
 CREATE TABLE Suppliers(
     id SERIAL NOT NULL PRIMARY KEY,
     name varchar NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE Carts(
     user_id int NOT NULL
 );
 
-DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Orders CASCADE;
 CREATE TABLE Orders(
     id SERIAL NOT NULL PRIMARY KEY,
     user_id int NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE Orders(
     payment_address varchar NOT NULL
 );
 
-DROP TABLE IF EXISTS Cart_content;
+DROP TABLE IF EXISTS Cart_content CASCADE;
 CREATE TABLE Cart_content(
     product_id int NOT NULL,
     quantity int NOT NULL,
@@ -71,8 +71,6 @@ ALTER TABLE ONLY Orders
     ADD CONSTRAINT fk_cart_id FOREIGN KEY (cart_id) REFERENCES Carts(id);
 ALTER TABLE ONLY Cart_content
     ADD CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES Products(id);
-ALTER TABLE ONLY Cart_content
-    ADD CONSTRAINT fk_user_id FOREIGN KEY (cart_id) REFERENCES Carts(id);
 
 INSERT INTO Categories(name, department, description) VALUES ('RPG','Video Game', 'Role playing video game type');
 INSERT INTO Categories(name, department, description) VALUES ('Platformer','Video Game', 'Jumping and puzzle solving video game type.');
