@@ -17,6 +17,7 @@ function initChangeQuantity(){
 async function loadCart(){
     const productsData = await getProductsForCart()
     insertProductDataToModal(productsData)
+    managePaymentButton()
 }
 
 function enablePaymentButton(){
@@ -82,6 +83,15 @@ function insertProductDataToModal(productsData){
     initChangeQuantity()
 }
 
+function managePaymentButton(){
+    const paymentButton = document.getElementById("payment")
+    if(sessionStorage.getItem("username") !== null){
+        paymentButton.removeAttribute("disabled")
+    }else{
+        paymentButton.setAttribute("disabled","true")
+    }
+}
+
 function changeProductQuantity(e){
     let quantity = e.target.value
     let productId = e.target.getAttribute("data-product-id")
@@ -139,4 +149,5 @@ if(isEmptyCart()){
 }else{
     manageEmptyCart()
 }
+managePaymentButton()
 document.querySelector("#payment").addEventListener("click", handlePaymentClick);
