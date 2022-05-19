@@ -11,10 +11,8 @@ async function postForm(){
 }
 
 async function handlePaymentClick(event){
-    await postForm();
-    console.log("hello")
     let data = await dataHandler.get_payment_info(localStorage);
-    console.log("2")
+    await postForm();
     postToPayment(data)
     localStorage.clear()
 }
