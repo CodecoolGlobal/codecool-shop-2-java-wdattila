@@ -16,6 +16,10 @@ export let dataHandler = {
     save_order: function(data){
         let url = new URL("/checkout",window.location.href);
         return apiSave(url, data);
+    },
+    get_session_data : function(){
+        let url = new URL("api/session", window.location.href)
+        return apiGet(url)
     }
 }
 

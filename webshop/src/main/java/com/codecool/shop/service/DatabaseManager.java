@@ -45,6 +45,7 @@ public class DatabaseManager {
             this.productCategoryDao = new ProductCategoryDaoJdbc(dataSource);
             this.supplierDao = new SupplierDaoJdbc(dataSource);
             this.productDao = new ProductDaoJdbc(dataSource, this.productCategoryDao, this.supplierDao);
+            this.userDao = new UserDaoJdbc(dataSource);
             this.shoppingCartDao = new ShoppingCartDaoJdbc(dataSource, productDao);
             this.userCartDao = new UserCartDaoJdbc(dataSource);
             this.orderDao = new OrderDaoJdbc(dataSource);
