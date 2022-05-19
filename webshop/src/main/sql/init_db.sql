@@ -67,8 +67,6 @@ ALTER TABLE ONLY Carts
     ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES Users(id);
 ALTER TABLE ONLY Orders
     ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES Users(id);
-ALTER TABLE ONLY Orders
-    ADD CONSTRAINT fk_cart_id FOREIGN KEY (cart_id) REFERENCES Carts(id);
 ALTER TABLE ONLY Cart_content
     ADD CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES Products(id);
 
