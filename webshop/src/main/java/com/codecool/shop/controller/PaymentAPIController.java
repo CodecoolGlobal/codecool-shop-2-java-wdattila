@@ -44,9 +44,11 @@ public class PaymentAPIController extends HttpServlet {
         ShoppingCartService cartService = dbManager.getShoppingCartService();
 
         ShoppingCart cart = new ShoppingCart("cart");
-        cartService.addShoppingCart(cart);
         products.keySet().
-                forEach(p -> cartService.addProductToCartById(cart.getId(), Integer.parseInt(p), products.get(p).getAsInt()));
+                forEach(p -> cartService.addProductToCartById(cart, Integer.parseInt(p), products.get(p).getAsInt()));
+
+        //int userId = Integer.parseInt(req.getParameter("userId"));
+        cartService.addShoppingCart(cart, 1);
 
         Map<String, String> params = new HashMap<>();
         params.put("totalPrice", String.valueOf(cart.getTotalPrice()));

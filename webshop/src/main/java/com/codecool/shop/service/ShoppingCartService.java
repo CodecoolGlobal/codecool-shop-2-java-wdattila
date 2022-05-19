@@ -1,10 +1,12 @@
 package com.codecool.shop.service;
 
+import com.codecool.shop.dao.OrderDao;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.ShoppingCartDao;
 import com.codecool.shop.dao.UserCartDao;
 import com.codecool.shop.dao.implementation.mem.ProductDaoMem;
 import com.codecool.shop.dao.implementation.mem.ShoppingCartDaoMem;
+import com.codecool.shop.model.Order;
 import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ShoppingCart;
 import com.codecool.shop.model.User;
@@ -17,12 +19,15 @@ public class ShoppingCartService {
     private ShoppingCartDao shoppingCartDao;
     private ProductDao productDao;
     private UserCartDao userCartDao;
+    private OrderDao orderDao;
 
-    public ShoppingCartService(ShoppingCartDao shoppingCartDao, ProductDao productDao, UserCartDao userCartDao) {
+    public ShoppingCartService(ShoppingCartDao shoppingCartDao, ProductDao productDao, UserCartDao userCartDao, OrderDao orderDao) {
         this.shoppingCartDao = shoppingCartDao;
         this.productDao = productDao;
         this.userCartDao = userCartDao;
+        this.orderDao = orderDao;
     }
+
 
     public void addShoppingCart(ShoppingCart shoppingCart) {
         shoppingCartDao.add(shoppingCart);
@@ -55,5 +60,15 @@ public class ShoppingCartService {
     public String getCartTotalPriceStringById(int id){
         ShoppingCart cart = shoppingCartDao.find(id);
         return cart == null ? "" : cart.getTotalPriceString();
+    }
+
+    public void saveOrder(Object userId, String shippingAddress, String postAddress, String phone){
+        Order order = new Order("",
+                (int) userId,
+                userCartDao.findCartId((int) userId),
+                shippingAddress,
+                postAddress,
+                phone);
+        orderDao.add(order);
     }
 }
