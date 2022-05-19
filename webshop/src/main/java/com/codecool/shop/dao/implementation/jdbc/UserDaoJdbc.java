@@ -19,7 +19,21 @@ public class UserDaoJdbc implements UserDao {
 
     @Override
     public void add(User user) {
-
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "INSERT INTO Users (name, password, email, salt) " +
+                    "VALUES (?, ?, ?, ?)";
+            PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            statement.setString(1, user.getName());
+            statement.setString(2, HashManager.hashToStringMatrix(user.getPassword()));
+            statement.setString(3, user.getEmail());
+            statement.setString(4, HashManager.hashToStringMatrix(user.getSalt()));
+            statement.executeUpdate();
+            ResultSet resultSet = statement.getGeneratedKeys();
+            resultSet.next();
+            user.setId(resultSet.getInt(1));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
