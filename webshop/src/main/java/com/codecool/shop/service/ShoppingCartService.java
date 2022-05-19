@@ -8,6 +8,7 @@ import com.codecool.shop.model.Product;
 import com.codecool.shop.model.ShoppingCart;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Map;
 
 public class ShoppingCartService {
@@ -21,6 +22,10 @@ public class ShoppingCartService {
 
     public void addShoppingCart(ShoppingCart shoppingCart) {
         shoppingCartDao.add(shoppingCart);
+    }
+
+    public void addProductToCartById(ShoppingCart shoppingCart, int productId, int quantity){
+        shoppingCart.addProduct(productDao.find(productId), quantity);
     }
 
     public void addProductToCartById(int cartId, int productId, int quantity){
