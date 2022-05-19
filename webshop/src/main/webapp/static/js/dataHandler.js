@@ -12,6 +12,10 @@ export let dataHandler = {
         let url = new URL("api/save/cart",window.location.href);
         url.searchParams.append("userId", user_id);
         return apiPost(url, data);
+    },
+    get_session_data : function(){
+        let url = new URL("api/session", window.location.href)
+        return apiGet(url)
     }
 }
 

@@ -59,7 +59,9 @@ public class LoginController extends HttpServlet {
                 engine.process("loginPage.html", context, response.getWriter());
             }else{
                 session.setAttribute("username", user.getName());
+                session.setAttribute("userid", user.getId());
                 logger.info("Session created with username: "+ session.getAttribute("username"));
+                logger.info("Session created with userId: " + session.getAttribute("userid"));
                 response.sendRedirect(request.getContextPath()+"/");
             }
         } catch (InvalidKeySpecException e) {
