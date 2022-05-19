@@ -58,7 +58,7 @@ public class ProductDaoJdbc implements ProductDao {
             if(rs.next()){
                 Product product = getProductFromResultSet(rs);
                 product.setId(id);
-                return getProductFromResultSet(rs);
+                return product;
             }else{
                 return null;
             }
