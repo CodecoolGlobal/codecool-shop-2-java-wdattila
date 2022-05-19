@@ -4,6 +4,8 @@ import com.codecool.shop.config.TemplateEngineUtil;
 import com.codecool.shop.model.Order;
 import com.codecool.shop.service.DatabaseManager;
 import com.codecool.shop.service.ShoppingCartService;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.thymeleaf.TemplateEngine;
@@ -15,13 +17,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = {"/checkout"})
 public class OrderFormController extends HttpServlet {
     private static final Logger logger
             = (Logger) LoggerFactory.getLogger(OrderController.class);
     private final DatabaseManager dbManager = new DatabaseManager();
+    private final Gson gson = new Gson();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -40,9 +45,17 @@ public class OrderFormController extends HttpServlet {
         WebContext context = new WebContext(req, resp, req.getServletContext());
         HttpSession session = req.getSession();
 
-        shoppingCartService.saveOrder(session.getAttribute("userid"),
-                req.getParameter("BillingCity"),
-                req.getParameter("ShippingCity"),
-                req.getParameter("name"));
+        StringBuilder builder = new StringBuilder();
+        BufferedReader reader = req.getReader();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            builder.append(line);
+        }
+        JsonObject data = gson.fromJson(builder.toString(), JsonObject.class);
+
+        shoppingCartService.saveOrder(1,
+                data.get("BillingCity").getAsString(),
+                data.get("ShippingCity").getAsString(),
+                data.get("name").getAsString());
     }
 }
