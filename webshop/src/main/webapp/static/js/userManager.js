@@ -32,4 +32,68 @@ function showRelevantUserButtons(){
     }
 }
 
+function createSaveCartButton(){
+    let modalFooter = document.getElementsByClassName("modal-footer")[0]
+    let saveCartDiv = document.createElement("div")
+    let saveCartButton = document.createElement("button")
+    saveCartDiv.classList.add("btn-nav")
+    saveCartDiv.id = "saveCart"
+    saveCartButton.type = "button"
+    saveCartButton.classList.add("btn")
+    saveCartButton.classList.add("btn-success")
+    saveCartButton.innerText = "Save Cart"
+
+    saveCartDiv.appendChild(saveCartButton)
+    modalFooter.appendChild(saveCartDiv)
+
+    initSaveCartButton()
+
+}
+
+function initSaveCartButton(){
+    let saveCartDiv = document.getElementById("saveCart")
+    saveCartDiv.addEventListener("click",saveCartButtonClicked)
+}
+
+function saveCartButtonClicked(){
+    dataHandler.save_cart(localStorage,sessionStorage.getItem("userid"))
+}
+
+function removeSaveCartButton(){
+    if(document.getElementById("saveCart") !== null){
+        let saveCartDiv = document.getElementById("saveCart")
+        console.log(saveCartDiv)
+        saveCartDiv.remove()
+    }
+
+
+}
+
+function initLogoutButton(){
+    let logoutButton = document.getElementById("logout")
+    logoutButton.addEventListener("click",removeSession)
+}
+
+function removeSession(){
+    sessionStorage.removeItem("username")
+    sessionStorage.removeItem("userid")
+}
+
+async function getSessionDataFromServer(){
+    let sessionData = await dataHandler.get_session_data()
+    console.log(sessionData)
+    if(!isEmptyJSON(sessionData)){
+        sessionStorage.setItem("username",sessionData["username"])
+        sessionStorage.setItem("userid",sessionData["userid"])
+    }
+}
+
+function isEmptyJSON(obj) {
+    return Object.keys(obj).length === 0;
+}
+
+
+
+removeSession()
+await getSessionDataFromServer()
 showRelevantUserButtons()
