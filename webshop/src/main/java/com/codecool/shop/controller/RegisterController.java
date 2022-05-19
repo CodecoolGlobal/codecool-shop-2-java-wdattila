@@ -60,8 +60,11 @@ public class RegisterController extends HttpServlet {
             } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
                 e.printStackTrace();
             }
-            userService.addUser(user);
-            session.setAttribute("username", username);
+            if (user != null) {
+                userService.addUser(user);
+                session.setAttribute("username", username);
+                session.setAttribute("userid", user.getId());
+            }
             response.sendRedirect("/login");
         }
     }
