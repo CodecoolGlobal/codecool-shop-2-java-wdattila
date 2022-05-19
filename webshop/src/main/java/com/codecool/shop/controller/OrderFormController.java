@@ -53,7 +53,7 @@ public class OrderFormController extends HttpServlet {
         }
         JsonObject data = gson.fromJson(builder.toString(), JsonObject.class);
 
-        shoppingCartService.saveOrder(1,
+        shoppingCartService.saveOrder(session.getAttribute("userid"),
                 data.get("BillingCity").getAsString(),
                 data.get("ShippingCity").getAsString(),
                 data.get("name").getAsString());

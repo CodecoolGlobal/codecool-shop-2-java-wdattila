@@ -50,7 +50,7 @@ public class PaymentAPIController extends HttpServlet {
 
         HttpSession session = req.getSession();
 
-        cartService.addShoppingCart(cart, 1);
+        cartService.addShoppingCart(cart, (int) session.getAttribute("userid"));
 
         Map<String, String> params = new HashMap<>();
         params.put("totalPrice", String.valueOf(cart.getTotalPrice()));
